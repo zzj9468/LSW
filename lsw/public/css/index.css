@@ -126,6 +126,10 @@ footer{
 
 /*----------------------------------footer----------------------*/
 /*----------footer----------01-*/
+footer{
+    background: #f0f0f0;
+    padding-bottom: 50px;
+}
 footer .footer_main .footer-01{
     padding:40px 0;
     border-bottom: 1px solid #e0e0e0;
