@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color:#666;
+}
+.fl
+{
+    float:left;
+}
+.fr{
+    float: right;
+}
+.cf:after,
+.cf:before{
+    display:block;
+    content:'';
+    clear:both;
+}
+
+body{
+    background: #f5f5f5;;
+}
+header{
+    width:100%;
+    margin:0 auto;
+}
+    /*--------01------------------------header--------------*/
+header .header_main{
+    width:980px;
+    height:60px;
+    padding: 25px 0 30px 60px;
+    vertical-align: middle;
+    margin:0 auto;
+}
+header .header_main span{
+    position:relative;
+    left:10px;
+    top:-24px;
+    font-size: 21px;
+    color:#666;
+}
+header .header_main span:hover{
+    color: #C9211C;
+    cursor: pointer;
+}
+/*-----------02--------------------body------------------*/
+.content{
+    width:100%;
+    margin:0 auto;
+    border:1px solid #dadada;
+}
+.content_main{
+    width:858px;
+    margin:0 auto;
+    background:#fff;
+    padding:40px 60px;
+}
+.content .content_main form{
+    width:640px;
+}
+.content .content_main form div{
+    margin-bottom:15px;
+}
+.content .content_main form div:first-child span{
+    background:#f8285c;
+    color:#fff;
+    padding:5px 8px 5px 15px;
+    font-size: 10px;
+    font-weight:600;
+}
+.content .content_main form div:first-child b{
+    border-left:8px solid #f8285c;
+    border-bottom: 8px solid transparent;
+    position:absolute;
+    top:24px;
+    left:100px;
+}
+.content .content_main form div:first-child{
+    padding-left: 100px;
+    position:relative;
+    margin-bottom:30px;
+}
+.content .content_main form label{
+    font-size:14px;
+    color: rgb(51,51,51);
+    width:95px;
+    height:36px;
+    line-height: 36px;
+    text-align: center;
+}
+.content .content_main form input{
+    width:280px;
+    height: 36px;
+    border:1px solid #dadada;
+    line-height: 36px;
+    font-size:13px;
+    color:#b7b7b7;
+    background:#fff;
+    padding: 1px 1px 1px 5px;
+}
+.content .content_main form div :nth-child(2)
+
+/*--------03------------------------footer--------------*/
+footer .footer_main p{
+    font-size: 10px;
+    color:#668686;
+    margin-top:25px;
+    text-align: center;
+}
