@@ -34,7 +34,116 @@ footer{
     width:1200px;
     margin: 0 auto;
 }
-
+.sec_kill,.hot_sale{
+    width:100%;
+}
+.sec_kill .kill_main,
+.hot_sale .hot_main{
+    width:1200px;
+    margin:0 auto;
+}
+/*********************秒杀**********************/
+.sec_kill .kill_main .title{
+    padding:40px 0 10px 0;
+}
+.sec_kill .kill_main .title span {
+    width:230px;
+    height:27px;
+    background-image: url("../img/index/day.jpg");
+    background-repeat: no-repeat;
+}
+.sec_kill .kill_main .title ul li{
+    float:right;
+    color:#666;
+    font-size:12px;
+    line-height:28px;
+    margin:0 2px;
+}
+.sec_kill .kill_main .title .hour,
+.sec_kill .kill_main .title .date,
+.sec_kill .kill_main .title .minute,
+.sec_kill .kill_main .title .second{
+    width:28px;
+    height: 28px;
+    background:#111;
+    text-align: center;
+    color:#fff;
+    border-radius:4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sec_kill .kill_main .kill-content{
+    margin-top:5px;
+}
+.sec_kill .kill_main .kill-content .kill_2{
+    background:#fcda4f;
+    width:891px;
+    height:428px;
+    background-image: url("../img/index/lp_bg.png");
+    background-repeat: no-repeat;
+}
+.sec_kill .kill_main .kill-content .kill_2 ul{
+    position:relative;
+    top:18px;
+    width:889px;
+    height:400px;
+}
+.sec_kill .kill_main .kill-content .kill_2 ul li{
+    float:left;
+    width:216px;
+    height:190px;
+    margin:0 6px 10px 0;
+    background:#fff;
+    text-align:center;
+    display:block;
+    overflow: hidden;
+    position:relative;
+}
+.sec_kill .kill_main .kill-content .kill_2 ul li a img{
+    width:130px;
+    height:130px;
+    padding-top:8px;
+}
+.sec_kill .kill_main .kill-content .kill_2 ul li p:nth-child(2) a{
+    color:#777;
+    height:18px;
+    width:140px;
+    font-size:12px;
+    margin:0 auto;
+    line-height:18px;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+.sec_kill .kill_main .kill-content .kill_2 ul li p:last-child{
+    font-size:15px;
+    line-height: 20px;
+    color: rgb(231, 40, 58);
+    font-family: Arial, Helvetica, sans-serif, å®‹ä½“;
+    padding-top: 3px;
+}
+/***********************热卖*******************************/
+.hot_sale{
+    margin-top:25px;
+}
+.hot_sale .hot_main .title {
+    width:230px;
+    height:27px;
+    background-image: url("../img/index/hot.png");
+    background-repeat: no-repeat;
+    padding-bottom: 15px;
+}
+.hot_sale .hot_main .hot_content ul{
+    background:#fff;
+}
+.hot_sale .hot_main .hot_content ul li{
+    width:299px;
+    height:289px;
+    float:left;
+    display:block;
+    position:relative;
+    overflow: hidden;
+    border-right:1px solid rgb(241, 241, 241);
+    border-bottom:1px solid rgb(241, 241, 241);
+}
 
 
 
