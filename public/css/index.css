@@ -34,13 +34,20 @@ footer{
     width:1200px;
     margin: 0 auto;
 }
-.sec_kill,.hot_sale{
+.sec_kill,.hot_sale,.floor_1{
     width:100%;
 }
 .sec_kill .kill_main,
-.hot_sale .hot_main{
+.hot_sale .hot_main,
+.floor .floor_main{
     width:1200px;
     margin:0 auto;
+}
+.active{
+    display:block;
+}
+.hidden{
+    display:none;
 }
 /*********************秒杀**********************/
 .sec_kill .kill_main .title{
@@ -135,15 +142,141 @@ footer{
     background:#fff;
 }
 .hot_sale .hot_main .hot_content ul li{
-    width:299px;
+    width:298px;
     height:289px;
     float:left;
     display:block;
     position:relative;
     overflow: hidden;
-    border-right:1px solid rgb(241, 241, 241);
-    border-bottom:1px solid rgb(241, 241, 241);
+    border-right:2px solid rgb(241, 241, 241);
+    border-bottom:2px solid rgb(241, 241, 241);
+    text-align:center;
+    padding-top:30px;
+}
+.hot_sale .hot_main .hot_content ul li span{
+    width:54px;
+    height:54px;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    background:url("../img/index/hot_sale.png") no-repeat;
+
+}
+.hot_sale .hot_main .hot_content ul li a img{
+    width:180px;
+    height:180px;
+    margin-bottom: 20px;
+    transition:all .4s;
+}
+.hot_sale .hot_main .hot_content ul li a img:hover{
+    transform:scale(1.1);
 }
 
+.hot_sale .hot_main .hot_content ul li p:nth-child(3) a{
+    font-size:12px;
+    color:#777;
+    width:180px;
+    height:20px;
+    line-height:20px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.hot_sale .hot_main .hot_content ul li p:last-child a{
+    display:block;
+    font-size:24px;
+    line-height:30px;
+    color:#e7283a;
+   padding-top: 15px;
+}
 
+/***********************1楼层******************************/
+.floor .floor_main {
+    margin-top:25px;
+
+}
+.floor .floor_main .title{
+    height:36px;
+    padding-bottom: 8px;
+}
+.floor .floor_main .title span{
+    font-size:23px;
+    line-height: 36px;
+    font-weight:700;
+    color:#2F2F2F;
+    display:inline-block;
+}
+.floor .floor_main .title ul li{
+    float:right;
+    font-size:14px;
+    font-weight:500;
+    margin-left:10px;
+    line-height:36px;
+}
+.floor .floor_main .title ul{
+    position:relative;
+    top:-35px;
+}
+.floor .floor_main .title ul li a{
+    color:#ff9228;
+    padding:3px 6px;
+}
+.floor .floor_main .title ul li a:hover{
+    background: #ff9228;
+    color: #fff;
+    border-radius:3px;
+}
+.floor .floor_main .content{
+    background:#fff;
+}
+.floor .floor_main .content div,
+.floor  .floor_main .content ul
+{
+    position:relative;
+    top:-28px;
+}
+
+.floor .floor_main .content div {
+    float:left;
+}
+.floor  .floor_main .content div a:first-child img{
+    width:240px;
+    height:430px;
+}
+
+.floor .floor_main .content ul{
+    width:960px;
+    float:left;
+}
+.floor  .floor_main .content ul li{
+    width:238px;
+    height:215px;
+    float:left;
+    border-right: 2px solid rgb(241, 241, 241);
+    border-bottom: 2px solid rgb(241, 241, 241);
+    text-align: center;
+}
+.floor  .floor_main .content ul li p a img{
+    width:160px;
+    height:160px;
+    display:inline-block;
+    padding-top: 8px;
+}
+.floor  .floor_main .content ul li a:nth-child(2){
+    font-size: 10px;
+    color:#666;
+    display: block;
+    height:18px;
+    line-height: 18px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    overflow:hidden;
+}
+.floor  .floor_main .content ul li span{
+    font-size:10px;
+    color:#f74447;
+    font-weight: 500;
+
+}
 
