@@ -49,11 +49,120 @@ footer{
 .hidden{
     display:none;
 }
-/*********************秒杀**********************/
+/**********************左侧************************/
+.left .left_main ul{
+    display: block;
+    width:45px;
+    position:fixed;
+    top:200px;
+    left:2px;
+    background:#363636;
+    z-index: 10;
+
+}
+.left .left_main ul li{
+    padding: 5px 5px;
+    border-top: 1px solid #9b9b9b;
+    width:35px;
+    overflow: hidden;
+    text-align: center;
+    transition:all .3s;
+}
+.left .left_main ul li:hover{
+    background:#d70b1c;
+    transform: translateX(1px);
+    border-top:1px solid #fff;
+}
+.left .left_main ul li a{
+    width:35px;
+    color:#fff;
+    font-size: 10px;
+    line-height: 10px;
+
+}
+/*********************右侧**********************/
+.right {
+    display: block;
+    position:fixed;
+    width:35px;
+    height: 100%;
+    background: #363636;
+    right:0;
+    z-index:999;
+}
+.right ul{
+    margin-top:110px;
+    z-index:1000;
+}
+.right ul li{
+    display: block;
+    color:#fff;
+    width:35px;
+    height:100px;
+    text-align: center;
+    padding-top: 20px;
+    font-size:13px;
+    border-bottom: 1px solid #9b9b9b;
+    padding-bottom: 10px;
+}
+.right ul li a{
+    display: block;
+    width:20px;
+    color: #fff;
+    text-align: center;
+    padding-top:20px;
+    font-size:12px;
+}
+.right ul li:first-child a{
+    padding-left:7px;
+    margin-bottom: 10px;
+}
+.right ul li:first-child span{
+    border-radius:20px;
+    padding:3px 8px;
+    background: #d50039;
+    color:#fff;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.right ul li:nth-child(2) a{
+    width:20px;
+    text-align: center;
+    padding-left:6px;
+    color:#999;
+    background: url("../img/index/r_bar.png") no-repeat -62px 0 ;
+    padding-top: 25px;
+}
+.right ul li:nth-child(3) a{
+    padding-left:6px;
+    width:20px;
+    text-align: center;
+    color:#999;
+    background: url("../img/index/r_bar.png") no-repeat -355px 0 ;
+    padding-top: 28px;
+
+}
+.right ul li:nth-child(4) a{
+    padding-left:6px;
+    width:20px;
+    text-align: center;
+    color:#999;
+    background: url("../img/index/r_bar.png") no-repeat -434px 0 ;
+    padding-top: 28px;
+}
+.right ul li:last-child{
+    border-bottom: none;
+}
+.right ul li:last-child a{
+    width:50px;
+    background: url("../img/index/r_bar.png") no-repeat -207px 0px ;
+}
+    /*********************秒杀**********************/
 .sec_kill .kill_main .title{
     padding:40px 0 10px 0;
 }
 .sec_kill .kill_main .title span {
+    font-size:10px;
     width:230px;
     height:27px;
     background-image: url("../img/index/day.jpg");
@@ -152,7 +261,9 @@ footer{
     border-bottom:2px solid rgb(241, 241, 241);
     text-align:center;
     padding-top:30px;
+
 }
+
 .hot_sale .hot_main .hot_content ul li span{
     width:54px;
     height:54px;
@@ -192,8 +303,7 @@ footer{
 
 /***********************1楼层******************************/
 .floor .floor_main {
-    margin-top:25px;
-
+    margin-top:32px;
 }
 .floor .floor_main .title{
     height:36px;
@@ -228,6 +338,7 @@ footer{
 }
 .floor .floor_main .content{
     background:#fff;
+    height:430px;
 }
 .floor .floor_main .content div,
 .floor  .floor_main .content ul
@@ -249,19 +360,27 @@ footer{
     float:left;
 }
 .floor  .floor_main .content ul li{
-    width:238px;
+    position:relative;
+    width:239px;
     height:215px;
     float:left;
-    border-right: 2px solid rgb(241, 241, 241);
-    border-bottom: 2px solid rgb(241, 241, 241);
+    border-right: 1px solid rgb(241, 241, 241);
+    border-bottom: 1px solid rgb(241, 241, 241);
     text-align: center;
+
 }
+
 .floor  .floor_main .content ul li p a img{
     width:160px;
     height:160px;
     display:inline-block;
     padding-top: 8px;
+    vertical-align: bottom;
+    transition: all 0.5s;
 }
+.floor  .floor_main .content ul li p a img:hover{
+    transform:rotateY(360deg);
+ }
 .floor  .floor_main .content ul li a:nth-child(2){
     font-size: 10px;
     color:#666;
@@ -272,6 +391,7 @@ footer{
     white-space: nowrap;
     text-align: center;
     overflow:hidden;
+    padding-top: 5px;
 }
 .floor  .floor_main .content ul li span{
     font-size:10px;
@@ -279,4 +399,27 @@ footer{
     font-weight: 500;
 
 }
+/*效果*/
+.floor_1 .floor_main .content ul li div{
+    position:absolute;
+    width:239px;
+    height:215px;
+    background: rgba(240, 240, 240, 0.2);
+    top:0;
+    color:#fff;
+    text-align: center;
+    line-height: 215px;
+    font-weight: 600;
+}
 
+.floor_1 .floor_main .content ul li div:hover{
+    position:absolute;
+    width:239px;
+    height:215px;
+    background: rgba(255, 255, 255, 0);
+    top:0;
+    color:#fff;
+    text-align: center;
+    line-height: 215px;
+    font-weight: 600;
+}
