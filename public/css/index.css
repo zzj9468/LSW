@@ -34,9 +34,10 @@ footer{
     width:1200px;
     margin: 0 auto;
 }
-.sec_kill,.hot_sale,.floor_1{
+.banner .sec_kill,.hot_sale,.floor_1{
     width:100%;
 }
+.banner .banner_main,
 .sec_kill .kill_main,
 .hot_sale .hot_main,
 .floor .floor_main{
@@ -49,7 +50,186 @@ footer{
 .hidden{
     display:none;
 }
-/**********************左侧************************/
+/**********************banner************************/
+.banner .banner_main .menu{
+    width:190px;
+    height:385px;
+
+}
+.banner .banner_main .menu  .menu_list{
+    width:190px;
+    position:relative;
+    z-index:1;
+}
+.banner .banner_main .menu  .menu_list .menu_item   {
+    width:200px;
+    position: absolute;
+    height:385px;
+    left:190px;
+    background:#fff;
+    padding:0 15px;
+    overflow:hidden;
+    z-index:2;
+}
+.banner .banner_main .menu  .menu_list h3{
+    width:190px;
+    height:35px;
+    line-height:35px;
+    position:relative;
+    font-size:13px;
+    font-weight: 600;
+    text-align:left;
+    color:#fff;
+    margin-left:58px;
+}
+.banner .banner_main .menu  .menu_list:first-child .menu_item p{
+    padding-top:10px;
+    margin-top:26px;
+    border-top:1px dashed #ccc;
+}
+.banner .banner_main .menu  .menu_list h3 a{
+      color:#fff;
+    transition: all .3s ease;
+}
+
+.banner .banner_main .menu  .menu_list .menu_item p{
+    border-top:1px dashed #ccc;
+    padding-top:10px;
+    margin-top:15px;
+    font-size:13px;
+    text-align:center;
+}
+.banner .banner_main .menu  .menu_list .menu_item p a{
+    color:rgb(231, 40, 58);
+}
+.banner .banner_main .menu  .menu_list:first-child {
+    background:url("../img/index/menu.png") 0 0 no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:first-child:hover {
+    background:url("../img/index/menu.png") -190px 0 no-repeat;
+    transition: all .3s ease;
+}
+
+.banner .banner_main .menu  .menu_list:nth-child(2) {
+    background:url("../img/index/menu.png") 0 -35px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(2):hover {
+    background:url("../img/index/menu.png") -190px -35px no-repeat;
+}
+
+.banner .banner_main .menu  .menu_list:nth-child(3) {
+    background:url("../img/index/menu.png") 0 -70px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(3):hover {
+    background:url("../img/index/menu.png") -190px -70px no-repeat;
+}
+
+.banner .banner_main .menu  .menu_list:nth-child(4) {
+    background:url("../img/index/menu.png") 0 -106px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(4):hover {
+    background:url("../img/index/menu.png") -190px -106px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(5) {
+    background:url("../img/index/menu.png") 0 -139px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(5):hover {
+    background:url("../img/index/menu.png") -190px -139px no-repeat;
+}
+.banner .banner_main .menu  .menu_list:nth-child(6) {
+    background:url("../img/index/menu.png") 0 -174px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(6):hover {
+    background:url("../img/index/menu.png") -190px -174px no-repeat;
+}
+
+.banner .banner_main .menu  .menu_list:nth-child(7) {
+    background:url("../img/index/menu.png") 0 -209px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(7):hover {
+    background:url("../img/index/menu.png") -190px -209px no-repeat;
+}
+
+.banner .banner_main .menu  .menu_list:nth-child(8) {
+    background:url("../img/index/menu.png") 0 -244px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(8):hover {
+    background:url("../img/index/menu.png") -190px -244px no-repeat;
+}
+
+.banner .banner_main .menu  .menu_list:nth-child(9) {
+    background:url("../img/index/menu.png") 0 -279px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(9):hover {
+    background:url("../img/index/menu.png") -190px -279px no-repeat;
+    transition: all .3s ease;
+}
+
+.banner .banner_main .menu  .menu_list:nth-child(10) {
+    background:url("../img/index/menu.png") 0 -315px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:nth-child(10):hover {
+    background: url("../img/index/menu.png") -190px -315px no-repeat;
+}
+.banner .banner_main .menu  .menu_list:last-child {
+    background:url("../img/index/menu.png") 0 -350px no-repeat;
+    transition: all .3s ease;
+}
+.banner .banner_main .menu  .menu_list:last-child:hover {
+    background:url("../img/index/menu.png") -190px -350px no-repeat;
+}
+
+.banner .banner_main .menu  .menu_list:hover  a {
+    color:rgb(231, 40, 58);
+}
+
+.it01{
+    top:0;
+}
+.it02{
+    top:-35px;
+}
+.it03{
+    top:-70px;
+}
+.it04{
+    top:-105px;
+}
+.it05{
+    top:-140px;
+}
+.it06{
+    top:-175px;
+}
+.it07{
+    top:-205px;
+}
+.it08{
+    top:-240px;
+}
+.it09{
+    top:-275px;
+}
+.it10{
+    top:-310px;
+}
+.it11{
+    top:-345px;
+}
+
+
+    /**********************左侧************************/
 .left .left_main ul{
     display: block;
     width:45px;
@@ -84,17 +264,26 @@ footer{
 .right {
     display: block;
     position:fixed;
-    width:35px;
     height: 100%;
     background: #363636;
     right:0;
-    z-index:999;
+    z-index:100;
 }
-.right ul{
+.right .cart{
+    float:left;
+    width:280px;
+    height:100%;
+    background: #fff;
+    z-index:1000;
+
+}
+.right .right-menu{
     margin-top:110px;
     z-index:1000;
+    float:left;
+    height:100%;
 }
-.right ul li{
+.right .right-menu li{
     display: block;
     color:#fff;
     width:35px;
@@ -105,7 +294,10 @@ footer{
     border-bottom: 1px solid #9b9b9b;
     padding-bottom: 10px;
 }
-.right ul li a{
+.right .right-menu li:nth-child(2)~li{
+    height:70px;
+}
+.right .right-menu li a{
     display: block;
     width:20px;
     color: #fff;
@@ -113,11 +305,11 @@ footer{
     padding-top:20px;
     font-size:12px;
 }
-.right ul li:first-child a{
+.right .right-menu li:first-child a{
     padding-left:7px;
     margin-bottom: 10px;
 }
-.right ul li:first-child span{
+.right .right-menu li:first-child span{
     border-radius:20px;
     padding:3px 8px;
     background: #d50039;
@@ -125,7 +317,7 @@ footer{
     margin-top:10px;
     margin-bottom: 10px;
 }
-.right ul li:nth-child(2) a{
+.right .right-menu li:nth-child(2) a{
     width:20px;
     text-align: center;
     padding-left:6px;
@@ -133,7 +325,7 @@ footer{
     background: url("../img/index/r_bar.png") no-repeat -62px 0 ;
     padding-top: 25px;
 }
-.right ul li:nth-child(3) a{
+.right .right-menu li:nth-child(3) a{
     padding-left:6px;
     width:20px;
     text-align: center;
@@ -142,7 +334,7 @@ footer{
     padding-top: 28px;
 
 }
-.right ul li:nth-child(4) a{
+.right .right-menu li:nth-child(4) a{
     padding-left:6px;
     width:20px;
     text-align: center;
@@ -150,12 +342,71 @@ footer{
     background: url("../img/index/r_bar.png") no-repeat -434px 0 ;
     padding-top: 28px;
 }
-.right ul li:last-child{
+.right .right-menu li:last-child{
     border-bottom: none;
 }
-.right ul li:last-child a{
+.right .right-menu li:last-child a{
     width:50px;
-    background: url("../img/index/r_bar.png") no-repeat -207px 0px ;
+    background: url("../img/index/r_bar.png") no-repeat -207px 0;
+}
+.right .cart div:first-child{
+    background: #dedede;
+}
+.right .cart div:first-child a{
+    font-size:12px;
+    color:#666;
+    float:right;
+    line-height: 32px;
+    display: inline-block;
+    padding-right: 10px;
+
+}
+.right .cart .cart_list ul{
+    height:70px;
+    width:260px;
+    margin-left:10px;
+    border-bottom:1px dashed #ccc;
+}
+.right .cart .cart_list ul li{
+    float:left;
+    padding-right:10px;
+}
+.right .cart .cart_list ul li:first-child{
+    width:60px;
+}
+.right .cart .cart_list ul li:nth-child(2){
+    width:100px;
+    height:50px;
+    padding-top:20px;
+
+}
+.right .cart .cart_list ul li:nth-child(3){
+    width:30px;
+    line-height: 70px;
+    text-align: center;
+}
+.right .cart .cart_list ul li:last-child{
+    width:30px;
+    line-height:70px;
+    text-align:center;
+}
+.right .cart .cart_list ul li a,
+.right .cart .cart_list ul li
+{
+    color:#666;
+    font-size:10px;
+}
+.right .cart .cart_list ul li a  img{
+    width:50px;
+    height:50px;
+    vertical-align: center;
+    margin-left: 10px;
+    display:inline-block;
+    padding-top:10px;
+
+}
+.right .cart .cart_list ul li:nth-child(2) a{
+
 }
     /*********************秒杀**********************/
 .sec_kill .kill_main .title{
@@ -379,7 +630,8 @@ footer{
     transition: all 0.5s;
 }
 .floor  .floor_main .content ul li p a img:hover{
-    transform:rotateY(360deg);
+    border-radius: 50%;
+    transform:scale(1.1);
  }
 .floor  .floor_main .content ul li a:nth-child(2){
     font-size: 10px;
