@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #f5f5f5;
+}
+a{
+    text-decoration: none;
+}
+.fl,
+.fr{
+    float:left;
+}
+.cf:after,
+.cf:before{
+    display:block;
+    content:'';
+    clear:both;
+}
+.ct:before{
+    display:table;
+    content:'';
+}
+ul{
+    list-style: none;
+}
+
+
+/*********************右侧**********************/
+.right {
+    display: block;
+    position:fixed;
+    top:0;
+    height: 100%;
+    background: #363636;
+    right:0;
+    z-index:100;
+}
+.right .cart{
+    float:left;
+    width:280px;
+    height:100%;
+    background: #fff;
+    z-index:1000;
+
+}
+.right .right-menu{
+    margin-top:110px;
+    z-index:1000;
+    float:left;
+    height:100%;
+}
+.right .right-menu li{
+    display: block;
+    color:#fff;
+    width:35px;
+    height:100px;
+    text-align: center;
+    padding-top: 20px;
+    font-size:13px;
+    border-bottom: 1px solid #9b9b9b;
+    padding-bottom: 10px;
+}
+.right .right-menu li:nth-child(2)~li{
+    height:70px;
+}
+.right .right-menu li a{
+    display: block;
+    width:20px;
+    color: #fff;
+    text-align: center;
+    padding-top:20px;
+    font-size:12px;
+}
+.right .right-menu li:first-child a{
+    padding-left:7px;
+    margin-bottom: 10px;
+}
+.right .right-menu li:first-child span{
+    border-radius:20px;
+    padding:3px 8px;
+    background: #d50039;
+    color:#fff;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.right .right-menu li:nth-child(2) a{
+    width:20px;
+    text-align: center;
+    padding-left:6px;
+    color:#999;
+    background: url("../img/index/r_bar.png") no-repeat -62px 0 ;
+    padding-top: 25px;
+}
+.right .right-menu li:nth-child(3) a{
+    padding-left:6px;
+    width:20px;
+    text-align: center;
+    color:#999;
+    background: url("../img/index/r_bar.png") no-repeat -355px 0 ;
+    padding-top: 28px;
+
+}
+.right .right-menu li:nth-child(4) a{
+    padding-left:6px;
+    width:20px;
+    text-align: center;
+    color:#999;
+    background: url("../img/index/r_bar.png") no-repeat -434px 0 ;
+    padding-top: 28px;
+}
+.right .right-menu li:last-child{
+    border-bottom: none;
+}
+.right .right-menu li:last-child a{
+    width:50px;
+    background: url("../img/index/r_bar.png") no-repeat -207px 0;
+}
