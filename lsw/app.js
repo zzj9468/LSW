@@ -3,10 +3,9 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const userRouter=require("./routes/users");
 
-
 var app=express();
-var server=app.listen(3000,function(){
-	cosnole.log(`服务器创建成功`);
+app.listen(3000,()=>{
+	console.log(`服务器创建成功`);
 });
 app.use(bodyParser.urlencoded({
     extended:false
