@@ -44,7 +44,12 @@ a:hover{
 .details .details_main .top{
     background:#fff;
 }
-
+.hide{
+    display:none;
+}
+.active{
+    display: block;
+}
 /*********面包屑*************/
 .details .details_main .top .crumb{
     font-size:13px;
@@ -125,6 +130,7 @@ a:hover{
 .details .details_main .top .info{
     float:left;
     width:710px;
+    margin-bottom:70px;
 }
 .details .details_main .top .info h3{
     font-size: 23px;
@@ -149,6 +155,7 @@ a:hover{
     color:#e61940;
     font-size: 32px;
     text-indent: 20px;
+
 }
 .details .details_main .top .info .price ul li:nth-child(2){
     color:#666;
@@ -204,9 +211,15 @@ a:hover{
 .details .details_main .top .info .info_main p:nth-child(2) span:nth-child(6){
     padding-right: 20px;
 }
+.details .details_main .top .info .info_main p:last-child{
+    position: relative;
+}
 .details .details_main .top .info .info_main p:last-child span{
     color:#e61952;
-    font-size:10px;
+    font-size:14px;
+    position:absolute;
+    left:48px;
+
 }
 .details .details_main .top .info .store div:first-child,
 .details .details_main .top .info .store span:nth-child(2),
@@ -218,16 +231,174 @@ a:hover{
 .details .details_main .top .info .store div:first-child{
     padding-right: 10px;
 }
+.details .details_main .top .info .store .address{
+    position:relative;
+}
+.details .details_main .top .info .store .address .add_top{
+    background: url("../img/details/down.png") 46px 8px no-repeat;
+    border:1px solid #ddd;
+    margin:0 10px;
+}
 .details .details_main .top .info .store .address .add_top span{
     line-height:30px;
-    padding:3px  25px 0 20px;
-    background: url("../img/details/icon-stock.png") -79px -57px  no-repeat;
+    padding:0  17px 0 14px;
+
 }
 .details .details_main .top .info .store span{
     color:#666;
     line-height: 30px;
 }
+.details .details_main .top .info .store .address dl{
+    width:401px;
+    position:absolute;
+    top:31px;
+    padding:5px;
+    background: #fff;
+    color:#444;
+    line-height: 30px;
+    border: 1px solid rgb(224, 224, 224);
+    left:85px;
+}
+.details .details_main .top .info .store .address dl dt {
+    color:#999;
+    text-indent: 10px;
+    font-size:12px;
 
+}
+.details .details_main .top .info .store .address dl dd a {
+    font-size:13px;
+    color:#666;
+    line-height:20px;
+    height:22px;
+    padding:1px 3px;
+    width: 69px;
+    display:inline-block;
+    text-align: center;
+    transition:all .1s linear;
+
+}
+.details .details_main .top .info .store .address dl dd a:hover{
+    background: #E9380C;
+    color:#fff;
+}
+.details .details_main .top .info div.num{
+    margin-top:15px;
+}
+.details .details_main .top .info div.num .num_info,
+.details .details_main .top .info .num ul,
+.details .details_main .top .info .num ul li
+{
+    float:left;
+    line-height:35px;
+    text-align: center;
+    position:relative;
+}
+.details .details_main .top .info .num ul{
+    line-height: 25px;
+    margin-left: 15px;
+}
+.details .details_main .top .info .num ul li a{
+    width:20px;
+    height:25px;
+    border:1px solid #ddd;
+    display: inline-block;
+    line-height: 25px;
+    font-size: 20px;
+}
+.details .details_main .top .info .num ul li input{
+    width:40px;
+    height:25px;
+    position:relative;
+    top:-2px;
+    border-top:1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left:0;
+    border-right: 0;
+    left:0;
+    text-align: center;
+}
+.details .details_main .top .info .btn{
+    margin:20px;
+    padding:20px;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+.details .details_main .top .info .btn span a:first-child{
+    width:253px;
+    height: 47px;
+    margin-right: 20px;
+    background:url("../img/details/cart.png") no-repeat ;
+    display: inline-block;
+}
+.details .details_main .top .info .btn span a:last-child{
+    display: inline-block;
+    width:180px;
+    height: 47px;
+    background:url("../img/details/buy.png") no-repeat ;
+}
+.details .details_main .top .info .other a{
+    color:#458df0;
+}
+.details .details_main .top .info .other span{
+    color:#e61952;
+    line-height:30px;
+}
+.details .details_main .top .info .share span:first-child{
+    line-height: 30px;
+    background:url("../img/details/share.png") 1px 5px no-repeat;
+    text-indent: 10px;
+    display: inline-block;
+    width:62px;
+    padding-left:10px;
+    float: left;
+
+}
+.details .details_main .top .info .share a:nth-child(2),
+.details .details_main .top .info .share a:nth-child(3),
+.details .details_main .top .info .share a:nth-child(4),
+.details .details_main .top .info .share a:nth-child(5) {
+    display: inline-block;
+    width:22px;
+    height: 25px;
+    margin-left:10px;
+    float: left;
+}
+.details .details_main .top .info .share a:nth-child(2){
+    background: url("../img/details/qq.png") 1px 5px  no-repeat;
+}
+.details .details_main .top .info .share a:nth-child(3){
+    background: url("../img/details/sina.png") 1px 5px  no-repeat;
+}
+
+.details .details_main .top .info .share a:nth-child(4){
+    background: url("../img/details/tenxun.png") 1px 5px  no-repeat;
+}
+
+.details .details_main .top .info .share a:nth-child(5){
+    background: url("../img/details/renren.png") 1px 5px  no-repeat;
+}
+.details .details_main .top .info .share a:nth-child(6){
+    display: inline-block;
+    width:50px;
+    height: 30px;
+    line-height:30px;
+    text-align: center;
+    margin-left:10px;
+    float: left;
+    background: url("../img/details/s_time.png") 1px 2px  no-repeat;
+}
+.details .details_main .top .info .share a:last-child{
+    display: inline-block;
+    width:100px;
+    height: 30px;
+    line-height:30px;
+    text-align: center;
+    margin-left:10px;
+    float: left;
+    background: url("../img/details/xin.png") 3px 7px  no-repeat;
+    color:#e61952;
+
+}
     /*********************右侧**********************/
 .right {
     display: block;
