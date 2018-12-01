@@ -10,9 +10,11 @@ body{
 a{
     text-decoration: none;
 }
-.fl,
-.fr{
+.fl{
     float:left;
+}
+.fr{
+    float:right;
 }
 .cf:after,
 .cf:before{
@@ -34,7 +36,8 @@ ul{
     padding-bottom: 10px;
     font-size:13px;
 }
-.details .details_main{
+.details .details_main
+{
     width:1200px;
     margin:0 auto;
 }
@@ -397,7 +400,292 @@ a:hover{
     float: left;
     background: url("../img/details/xin.png") 3px 7px  no-repeat;
     color:#e61952;
+}
+.details .bottom{
+    width:1200px;
+    margin:20px auto;
 
+}
+.details .bottom .bt_left{
+    width:970px;
+    float:left;
+    background:#fff;
+}
+.details .bottom .bt_right{
+    float: left;
+    width:220px;
+}
+.details .bottom .bt_left .rule{
+    padding: 15px;
+    margin: 20px;
+    color:#777;
+    line-height: 25px;
+    background: #f7f7f7;
+}
+.details .bottom .bt_left .rule p{
+    font-weight: 700;
+}
+
+.details .bottom .bt_left .bt_info .bt_list ul li{
+    float:left;
+    text-align: center;
+    line-height: 45px;
+    font-size:14px;
+}
+.details .bottom .bt_left .bt_info .bt_list ul li a{
+    border:1px solid #E4E4E4;
+    width:240.5px;
+    display: inline-block;
+    color:#666;
+}
+.details .bottom .bt_left .bt_info .bt_list ul li a:hover{
+    border-top:2px solid #e61952;
+    border-bottom: 0;
+    color:#e61952;
+}
+.details .bottom .bt_left .bt_info .bt_info_item1 {
+    margin:20px;
+    line-height:30px;
+}
+
+.details .bottom .bt_left .bt_info .bt_info_item1 .item1_top{
+    color: rgb(51, 51, 51);
+    padding: 10px 20px;
+    background:#f7f7f7;
+    margin-bottom: 20px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item1 .item1_top table{
+    width:900px;
+    text-align: left;
+}
+.details .bottom .bt_left .bt_info .bt_info_item1 .item_2{
+    width:930px;
+    margin:0 auto;
+    padding-top:20px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item1 .item_2 p{
+    text-align: center;
+}
+.details .bottom .bt_left .bt_info .bt_info_item1 .item_2 span{
+    display: block;
+    margin:15px;
+    padding:10px;
+    color:#e61952;
+    border-top:1px dashed #bbb;
+    border-bottom:1px dashed #bbb;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2,
+.details .bottom .bt_left .bt_info .bt_info_item3
+{
+    padding-bottom: 20px;
+}
+
+.details .bottom .bt_left .bt_info .bt_info_item2 .it2_title{
+    width:930px;
+    height:50px;
+    line-height: 20px;
+    margin:0 auto;
+    position:relative;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    background:url("../img/details/dianping.png") -3px -6px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .it2_title span{
+    position: absolute;
+    right:10px;
+    top:21px;
+    font-size: 14px;
+
+}
+.details .bottom .bt_left .bt_info .bt_info_item2  .it2_title span em{
+    color:#e61952;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .pingjia{
+    width:900px;
+    line-height: 28px;
+    font-size:13px;
+    margin:10px auto 20px;
+    color:#666;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .pingjia ul{
+    border-bottom: 1px dashed #ddd;
+    padding: 11px 0 2px;
+}
+
+.details .bottom .bt_left .bt_info .bt_info_item2 .pingjia li{
+    float:left;
+    line-height:30px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .pingjia li:first-child{
+    width:160px;
+    height:26px;
+    background:url("../img/details/star.png") 38px 6px no-repeat ;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .pingjia ul li:last-child{
+    float:right;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .pingjia p{
+    line-height: 20px;
+    padding:15px 0 8px;
+    border-bottom: 1px dashed #ddd;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .page{
+    width:900px;
+    text-align: right;
+    font-size:12px;
+    margin:0;
+    color:#666;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .page a{
+    display:inline-block;
+    padding:3px 7px;
+    border:1px solid #bbb;
+    color:#666;
+}
+.details .bottom .bt_left .bt_info .bt_info_item2 .page span em{
+    color:#e61952;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 .it2_title{
+    width:930px;
+    height:50px;
+    line-height: 20px;
+    margin:0 auto;
+    position:relative;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    background:url("../img/details/ruhe.png") -3px -6px;
+
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul {
+    width:930px;
+    margin:0 auto;
+    color:#333;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li:first-child div{
+    background: url("../img/details/liucheng.png") no-repeat;
+    width:900px;
+    margin: 10px auto;
+    height:40px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li:nth-child(2) p{
+    padding:12px 20px 12px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li:nth-child(3) span{
+    padding-left: 20px;
+    color:#777;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table{
+    width:930px;
+    border-collapse: collapse;
+    margin-top:15px;
+    color:#616161;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table  th,
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table td{
+    line-height:40px;
+    border:1px solid #dbdbdb;
+    text-align: center;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table  th{
+    background:rgb(248, 248, 248);
+    font-size:14px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table  th:first-child{
+    width:150px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(2) td:nth-child(2){
+    text-align: left;
+    padding:12px 16px 12px;
+    line-height: 25px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(2) span{
+    color:#e61952;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(3) td:nth-child(2){
+    text-align: left;
+    padding:10px 15px 10px;
+    line-height: 77px;
+    position: relative;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(3) td:nth-child(2) img{
+    position: relative;
+    top:14px;
+    margin-right: 15px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(4) td p:first-child{
+    text-align: left;
+    padding: 10px 10px 10px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(4) td p span{
+    color:#e61952;
+}
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(5) td:last-child,
+.details .bottom .bt_left .bt_info .bt_info_item3 ul li table tr:nth-child(6) td:last-child{
+    text-align: left;
+    padding: 10px 10px 10px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item4 .it4_title{
+    width:930px;
+    height:50px;
+    line-height: 20px;
+    margin:0 auto;
+    position:relative;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    background:url("../img/details/fuwu.png") -3px -6px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item4 ul{
+    margin:12px 20px;
+}
+.details .bottom .bt_left .bt_info .bt_info_item4 ul li{
+    padding:10px 0;
+}
+.details .bottom .bt_left .bt_info .bt_info_item4 ul li b{
+    color:#ff8100;
+}
+.details .bottom .bt_left .bt_info .bt_info_item4 ul li p{
+    padding:10px 20px 0;
+}
+.details .bottom .bt_left .bt_info .bt_info_item4 ul li p span{
+    color:#e61952;
+}
+.details .bottom .bt_right{
+    margin-left:12px;
+    width:218px;
+    background: #fff;
+}
+.details .bottom .bt_right .title{
+    width:218px;
+    height:40px;
+    background: #FFB000;
+    color:#444;
+    font-size:15px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600;
+}
+.details .bottom .bt_right ul{
+    text-align: center;
+}
+.details .bottom .bt_right ul li{
+    border-bottom: 1px dashed #ddd;
+}
+.details .bottom .bt_right ul li a img{
+    width:170px;
+    height: 170px;
+    margin-top:15px;
+}
+.details .bottom .bt_right ul li p{
+    color:#777;
+    font-size:13px;
+    display: block;
+    padding-top: 10px;
+}
+.details .bottom .bt_right ul li p:last-child{
+    font-size:18px;
+    color:#e61940;
+    padding: 15px 0 15px;
+}
+.details .bottom .bt_right ul li p:last-child del{
+    font-size:13px;
+    color:#777;
 }
     /*********************右侧**********************/
 .right {

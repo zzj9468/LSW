@@ -86,7 +86,8 @@ footer{
 .logo .logo_main button{
     width:80px;
     height:39px;
-    color:#666;
+    color:#fff;
+    font-weight: 500;
     background-color: #ffc400;
     border:none;
     margin-left:-10px;

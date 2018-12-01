@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #f5f5f5;
+    font: 12px "simhei",Arial,Helvetica,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.fl,
+.fr{
+    float:left;
+}
+.cf:after,
+.cf:before{
+    display:block;
+    content:'';
+    clear:both;
+}
+.ct:before{
+    display:table;
+    content:'';
+}
+ul{
+    list-style: none;
+}
+.search,
+.container{
+    width:100%;
+}
+.search_main,
+.container_main{
+    width:1200px;
+    margin: 0 auto;
+}
+
+.active{
+    display:block;
+}
+.hidden{
+    display:none;
+}
+/**********************menu************************/
+.search .search_main .menu_info {
+    width:190px;
+    height:385px;
+    float:left;
+
+
+}
+.search .search_main .menu_info  .menu_list{
+    width:190px;
+    position:relative;
+    z-index:1;
+}
+.search .search_main  .menu_info  .menu_list .menu_item   {
+    width:200px;
+    position: absolute;
+    height:385px;
+    left:190px;
+    background:#fff;
+    padding:0 15px;
+    overflow:hidden;
+    z-index:2;
+}
+.search .search_main  .menu_info .menu_list h3{
+    width:130px;
+    height:35px;
+    line-height:35px;
+    position:relative;
+    font-size:13px;
+    font-weight: 600;
+    text-align:left;
+    color:#fff;
+    margin-left:58px;
+}
+.search .search_main  .menu_info .menu_list:first-child .menu_item p{
+    padding-top:10px;
+    margin-top:26px;
+    border-top:1px dashed #ccc;
+}
+.search .search_main  .menu_info  .menu_list h3 a{
+    color:#fff;
+    transition: all .3s ease;
+}
+
+.search .search_main .menu_info  .menu_list .menu_item p{
+    border-top:1px dashed #ccc;
+    padding-top:10px;
+    margin-top:15px;
+    font-size:13px;
+    text-align:center;
+}
+.search .search_main  .menu_info .menu_list .menu_item p a{
+    color:rgb(231, 40, 58);
+}
+.search .search_main  .menu_info .menu_list:first-child {
+    background:url("../img/index/menu.png") 0 0 no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:first-child:hover {
+    background:url("../img/index/menu.png") -190px 0 no-repeat;
+    transition: all .3s ease;
+}
+
+.search .search_main .menu_info  .menu_list:nth-child(2) {
+    background:url("../img/index/menu.png") 0 -35px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(2):hover {
+    background:url("../img/index/menu.png") -190px -35px no-repeat;
+}
+.search .search_main  .menu_info .menu_list:nth-child(3) {
+    background:url("../img/index/menu.png") 0 -70px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(3):hover {
+    background:url("../img/index/menu.png") -190px -70px no-repeat;
+}
+.search .search_main  .menu_info .menu_list:nth-child(4) {
+    background:url("../img/index/menu.png") 0 -106px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main .menu_info  .menu_list:nth-child(4):hover {
+    background: url("../img/index/menu.png") -190px -106px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(5) {
+    background: url("../img/index/menu.png") 0 -139px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(5):hover {
+    background:url("../img/index/menu.png") -190px -139px no-repeat;
+}
+.search .search_main  .menu_info .menu_list:nth-child(6) {
+    background:url("../img/index/menu.png") 0 -174px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(6):hover {
+    background:url("../img/index/menu.png") -190px -174px no-repeat;
+}
+
+.search .search_main  .menu_info .menu_list:nth-child(7) {
+    background:url("../img/index/menu.png") 0 -209px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(7):hover {
+    background:url("../img/index/menu.png") -190px -209px no-repeat;
+}
+
+.search .search_main  .menu_info .menu_list:nth-child(8) {
+    background:url("../img/index/menu.png") 0 -244px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(8):hover {
+    background:url("../img/index/menu.png") -190px -244px no-repeat;
+}
+
+.search .search_main  .menu_info .menu_list:nth-child(9) {
+    background:url("../img/index/menu.png") 0 -279px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(9):hover {
+    background:url("../img/index/menu.png") -190px -279px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main  .menu_info .menu_list:nth-child(10) {
+    background: url("../img/index/menu.png") 0 -315px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main .menu_info  .menu_list:nth-child(10):hover {
+    background: url("../img/index/menu.png") -190px -315px no-repeat;
+}
+.search .search_main  .menu_info .menu_list:last-child {
+    background: url("../img/index/menu.png") 0 -350px no-repeat;
+    transition: all .3s ease;
+}
+.search .search_main .menu_info  .menu_list:last-child:hover {
+    background:url("../img/index/menu.png") -190px -350px no-repeat;
+}
+
+.search .search_main  .menu_info .menu_list:hover  a {
+    color:rgb(231, 40, 58);
+}
+
+.it01{
+    top:0;
+}
+.it02{
+    top:-35px;
+}
+.it03{
+    top:-70px;
+}
+.it04{
+    top:-105px;
+}
+.it05{
+    top:-140px;
+}
+.it06{
+    top:-175px;
+}
+.it07{
+    top:-205px;
+}
+.it08{
+    top:-240px;
+}
+.it09{
+    top:-275px;
+}
+.it10{
+    top:-310px;
+}
+.it11{
+    top:-345px;
+}
+
+/**********************container************************/
+.search .search_main .container_info{
+    width:990px;
+    background: #fff;
+    float: left;
+    padding:10px 0 15px 20px;
+}
+.search .search_main .container_info .crumb{
+    font-size:14px;
+    color:#666;
+    padding:5px 0 15px;
+    border-bottom: 1px solid #eee;
+}
+.search .search_main .container_info .crumb span{
+    padding-right: 5px;
+}
+.search .search_main .container_info .lists ul{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.search .search_main .container_info .lists ul li{
+    float:left;
+    width:237px;
+    margin-left:8px;
+    text-align: center;
+}
+.search .search_main .container_info .lists ul li a{
+    position:relative;
+}
+.search .search_main .container_info .lists ul li a span{
+    background:url("../img/details/miaosha.png") no-repeat;
+    width:91px;
+    height: 73px;
+    position:absolute;
+    left:0;
+}
+.search .search_main .container_info .lists ul li p:nth-child(2){
+    margin-top:20px;
+    text-align: left;
+    color:#444;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.search .search_main .container_info .lists ul li p:last-child{
+    color:#e61940;
+    font-size:18px;
+    padding:30px 5px 30px;
+    text-align: left;
+}
+.search .search_main .container_info .lists ul li p:last-child del{
+    font-size: 12px;
+    color:#777;
+    margin-left: 25px;
+}
+.search .search_main .container_info .page{
+    width:900px;
+    text-align: right;
+    font-size:14px;
+    margin:0;
+    color:#666;
+}
+.search .search_main .container_info .page a{
+    display:inline-block;
+    padding:3px 7px;
+    border:1px solid #bbb;
+    color:#666;
+}
+.search .search_main .container_info .page .a_hover{
+    background: #ff8100;
+    border:1px solid #ff8100;
+    color:#fff;
+}
