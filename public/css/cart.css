@@ -107,10 +107,11 @@ footer{
     border-collapse: collapse;
     width:1200px;
 
+
 }
 .my_cart .my_cart_main table  tr{
     color:#444;
-    font-size: 14px;
+    font-size: 12px;
     border:1px solid #ddd;
     border-collapse: separate;
 }
@@ -132,6 +133,7 @@ footer{
     text-align: center;
     line-height: 12px;
     position:relative;
+    width:300px;
 }
 .my_cart .my_cart_main table tbody tr td:first-child input{
     position:relative;
@@ -142,7 +144,9 @@ footer{
     width:78px;
     height:78px;
 }
-
+.my_cart .my_cart_main table tbody tr td:nth-child(2){
+    width:300px;
+}
 .my_cart .my_cart_main table tbody tr td:nth-child(2) a,
 .my_cart .my_cart_main table tbody tr td:nth-child(3),
 .my_cart .my_cart_main table tbody tr td:nth-child(4),
@@ -181,6 +185,100 @@ footer{
 .my_cart .my_cart_main table tbody tr td:nth-child(4) div{
     position:relative;
     left:60px;
+}
+.my_cart .my_cart_main table tbody tr td:nth-child(7){
+    width:100px;
+}
+.my_cart .my_cart_main table tbody tr:nth-child(7){
+    height: 80px;
+    text-align: center;
+    background: #F4F4F4;
+}
+.my_cart .my_cart_main table tbody tr td .delete,
+.my_cart .my_cart_main table tbody tr td .submit{
+    position: relative;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-top:1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+    width:1133px;
+    margin:10px auto;
+}
+.my_cart .my_cart_main table tbody tr td .delete .del_left{
+    display: inline-block;
+    position:relative;
+    left:-290px;
 
 }
+.my_cart .my_cart_main table tbody tr td .delete .del_left a{
+    color:#458df0;
+    font-size: 12px;
+}
+.my_cart .my_cart_main table tbody tr td .delete .del_left span{
+    padding:0 10px;
+}
+.my_cart .my_cart_main table tbody tr td .delete .del_left input{
+    position:relative;
+    top:2px;
+}
+.my_cart .my_cart_main table tbody tr td .delete .del_right{
+    display: inline-block;
+    position: relative;
+    right: -350px;
+}
+.my_cart .my_cart_main table tbody tr td .delete .del_right span:nth-child(2){
+    color:#e61940;
+    display: inline-block;
+    padding:0 5px;
+}
+.my_cart .my_cart_main table tbody tr td .delete .del_right span:nth-child(4){
+    color: #e61940;
+    display: inline-block;
+    padding-left:60px;
+    font-size:18px;
+    font-weight: 600;
+}
+.my_cart .my_cart_main table tbody tr td .submit{
+    border:0;
+    height: 80px;
+    line-height: 80px;
+}
+.my_cart .my_cart_main table tbody tr td .submit p:first-child{
+    display: inline-block;
+    position:relative;
+    left:-100px;
+}
+.my_cart .my_cart_main table tbody tr td .submit p:first-child  span:nth-child(2),
+.my_cart .my_cart_main table tbody tr td .submit p:first-child  span:nth-child(4),
+.my_cart .my_cart_main table tbody tr td .submit p:first-child  span:nth-child(6){
+    color:#FF6F0F;
+    padding:0 25px 0 0;
+}
 
+.my_cart .my_cart_main table tbody tr td .submit p:last-child{
+    display: inline-block;
+    position: relative;
+    right: -162px;
+}
+.my_cart .my_cart_main table tbody tr td .submit p:last-child span:nth-child(2),
+.my_cart .my_cart_main table tbody tr td .submit p:last-child span:nth-child(4){
+    color:#e61940;
+    display: inline-block;
+    padding: 0 20px 0 5px
+}
+.my_cart .my_cart_main table tbody tr td .submit p:last-child a{
+    width:171px;
+    display: inline-block;
+    height: 50px;
+    background:url("../img/cart/submit.png") no-repeat;
+    position: relative;
+    top:18px;
+}
+.my_cart .my_cart_main table tbody tr td .submit p:last-child span:nth-child(4){
+    color: #e61940;
+    display: inline-block;
+    font-size:20px;
+    font-weight: 600;
+
+}
