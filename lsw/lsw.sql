@@ -857,13 +857,24 @@ INSERT INTO lsw_user VALUES
 (NULL, 'yaya', '123456', 'ya@qq.com', '13501234560');
 
 /**购物车条目**/
-CREATE TABLE lsw_cart_item(
-  iid INT PRIMARY KEY AUTO_INCREMENT,
-  user_id INT,      #用户编号
-  product_id INT,   #商品编号
-  count INT,        #购买数量
-  is_checked BOOLEAN #是否已勾选，确定购买
+CREATE TABLE lsw_cart(
+  cid INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(128),
+  href VARCHAR(16),
+  pic VARCHAR(32),
+  price INT,
+  count INT,
+  jifen INT
 );
+/**购物车--插入数据**/
+INSERT INTO lsw_cart VALUES
+    (NULL,'母亲牛肉棒原味22g', 'product.html?lid=43','imgs/sm/2f_2.3.jpg',5.50, 1,5),
+    (NULL,'格力高百力滋蓝莓芝士味45g', 'product.html?lid=74','imgs/sm/4f_1.2.jpg',4.00,1,4),
+    (NULL,'溜梅梅大大黄梅400g', 'product.html?lid=74','imgs/sm/5f_1.8.jpg',30.00,2,60),
+    (NULL,'TOMS蜂蜜黄油扁桃仁35g','product.html?lid=95','imgs/sm/5f_1.8.jpg',5.50,1,5),
+    (NULL,'淘豆原味豌豆*100g 约4袋', 'product.html?lid=88','imgs/sm/5f_1.1.jpg',3.50,4,12),
+    (NULL,'丽能压缩饼干葱油味*500g', 'product.html?lid=2','imgs/sm/1f_1.2.jpg',19.80,2,38);
+
 
 
 
