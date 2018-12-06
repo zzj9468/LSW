@@ -1,7 +1,7 @@
 const express=require('express');
 var router=express.Router();
 var pool=require('../pool');
-
+//测试地址：http://127.0.0.1:3000/index
 router.get('/',(req,res)=>{
     var output={
         miaosha:[/*秒杀商品*/],
@@ -11,7 +11,8 @@ router.get('/',(req,res)=>{
         f3:[/*3楼商品*/],
         f4:[/*4楼商品*/],
         f5:[/*5楼商品*/],
-        cart:[]
+        cart:[],
+        carousel:[]
     };
     // 1------查找秒杀
     var sql='SELECT * FROM lsw_index_miaosha';
@@ -63,10 +64,16 @@ router.get('/',(req,res)=>{
                 if(err)throw err;
                 //console.log(result);
                 output.cart=result; 
+                var sql='SELECT * FROM lsw_index_carousel';
+                pool.query(sql,(err,result)=>{
+                    if(err)throw err;
+                    //console.log(result);
+                    output.carousel=result; 
     
 
         res.send(output);
              });
+            });
              });
             });
          });

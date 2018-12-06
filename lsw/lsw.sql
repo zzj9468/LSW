@@ -11,10 +11,10 @@ CREATE TABLE lsw_index_carousel(
 );
 #轮播图---插入数据
 INSERT INTO lsw_index_carousel  VALUES
-        (NULL,'img/index/carousel/banner_1.jpg','首页轮播1','details.html?cid='),
-        (NULL,'img/index/carousel/banner_2.jpg','首页轮播2','details.html?cid='),
-        (NULL,'img/index/carousel/banner_3.jpg','首页轮播3','details.html?cid='),
-        (NULL,'img/index/carousel/banner_4.jpg','首页轮播4','details.html?cid=');
+        (NULL,'img/index/carousel/banner_1.jpg','感恩回馈','details.html?cid=66'),
+        (NULL,'img/index/carousel/banner_2.jpg','甜蜜味蕾','details.html?cid=95'),
+        (NULL,'img/index/carousel/banner_3.jpg','你的薯愿','details.html?cid=88'),
+        (NULL,'img/index/carousel/banner_4.jpg','热卖爆款','details.html?cid=74');
 
 #每日秒杀
 CREATE TABLE lsw_index_miaosha(
