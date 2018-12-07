@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({
 
 //将静态文件托管到public文件夹下
 app.use(express.static('public'));
+//跨域的URL
 app.use(cors({
 	origin:"http://127.0.0.1:5500",
 	credentials:true

@@ -16,70 +16,70 @@ router.get('/',(req,res)=>{
     };
     // 1------查找秒杀
     var sql='SELECT * FROM lsw_index_miaosha';
-    pool.query(sql,(err,result)=>{
+    pool.query(sql,(err,result)=>{  //pool.query是异步的，不支持promise，只能使用回调函数
         if(err)throw err;
         //console.log(result);
         output.miaosha=result;
-    // 2------查找热卖
-        var sql='SELECT * FROM lsw_index_hot';
-        pool.query(sql,(err,result)=>{
-          if(err)throw err;
-            //console.log(result);
-          output.hot=result;
+        // 2------查找热卖
+            var sql='SELECT * FROM lsw_index_hot';
+            pool.query(sql,(err,result)=>{
+            if(err)throw err;
+                //console.log(result);
+            output.hot=result;
     // 3-----查找1楼
-        var sql='SELECT * FROM lsw_index_product WHERE fid=1';
-        pool.query(sql,(err,result)=>{
-            if(err)throw err;
-            //console.log(result);
-            output.f1=result;
-      // 3-----查找2楼
-            var sql='SELECT * FROM lsw_index_product WHERE fid=2';
-            pool.query(sql,(err,result)=>{
-                if(err)throw err;
-                //console.log(result);
-                output.f2=result;
-      // 3-----查找3楼
-        var sql='SELECT * FROM lsw_index_product WHERE fid=3';
-        pool.query(sql,(err,result)=>{
-            if(err)throw err;
-            //console.log(result);
-            output.f3=result;
-
-       // 3-----查找4楼
-       var sql='SELECT * FROM lsw_index_product WHERE fid=4';
-       pool.query(sql,(err,result)=>{
-           if(err)throw err;
-           //console.log(result);
-           output.f4=result;
-
-        // 3-----查找5楼
-        var sql='SELECT * FROM lsw_index_product WHERE fid=5';
-        pool.query(sql,(err,result)=>{
-            if(err)throw err;
-            //console.log(result);
-            output.f5=result; 
-        // 3-----查找5楼
-            var sql='SELECT * FROM lsw_cart';
-            pool.query(sql,(err,result)=>{
-                if(err)throw err;
-                //console.log(result);
-                output.cart=result; 
-                var sql='SELECT * FROM lsw_index_carousel';
+                var sql='SELECT * FROM lsw_index_product WHERE fid=1';
                 pool.query(sql,(err,result)=>{
                     if(err)throw err;
                     //console.log(result);
-                    output.carousel=result; 
-    
+                    output.f1=result;
+                        // 3-----查找2楼
+                        var sql='SELECT * FROM lsw_index_product WHERE fid=2';
+                        pool.query(sql,(err,result)=>{
+                            if(err)throw err;
+                            //console.log(result);
+                            output.f2=result;
+                               // 3-----查找3楼
+                                var sql='SELECT * FROM lsw_index_product WHERE fid=3';
+                                pool.query(sql,(err,result)=>{
+                                    if(err)throw err;
+                                    //console.log(result);
+                                    output.f3=result;
 
-        res.send(output);
-             });
-            });
-             });
-            });
-         });
+                                        // 3-----查找4楼
+                                        var sql='SELECT * FROM lsw_index_product WHERE fid=4';
+                                        pool.query(sql,(err,result)=>{
+                                            if(err)throw err;
+                                            //console.log(result);
+                                            output.f4=result;
+
+                                                // 3-----查找5楼
+                                                var sql='SELECT * FROM lsw_index_product WHERE fid=5';
+                                                pool.query(sql,(err,result)=>{
+                                                    if(err)throw err;
+                                                    //console.log(result);
+                                                    output.f5=result; 
+                                                    // 3-----查找5楼
+                                                        var sql='SELECT * FROM lsw_cart';
+                                                        pool.query(sql,(err,result)=>{
+                                                            if(err)throw err;
+                                                            //console.log(result);
+                                                            output.cart=result; 
+                                                                var sql='SELECT * FROM lsw_index_carousel';
+                                                                pool.query(sql,(err,result)=>{
+                                                                    if(err)throw err;
+                                                                    //console.log(result);
+                                                                    output.carousel=result; 
+                                                    
+
+                                                                        res.send(output);
+                                                                });
+                                                        });
+                                                });
+                                        });
+                                 });
+                        });
+                });
         });
-        });
-    });
 })
 
     // 查找热卖

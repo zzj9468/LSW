@@ -17,7 +17,7 @@ router.get('/',(req,res)=>{
         var sql='SELECT * FROM lsw_detail_pic WHERE snacks_id=?';
         pool.query(sql,[lid],(err,result)=>{
         if(err) throw err; 
-        console.log(result);
+        //console.log(result);
         output.pics=result;
         res.send(output);
  
