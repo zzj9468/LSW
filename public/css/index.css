@@ -12,8 +12,7 @@ a{
 .fr{
     float:left;
 }
-.cf:after,
-.cf:before{
+.cf:after{
     display:block;
     content:'';
     clear:both;
@@ -577,7 +576,7 @@ footer{
 }
 .hot_sale .hot_main .hot_content ul li{
     width:298px;
-    height:289px;
+    height:275px;
     float:left;
     display:block;
     position:relative;
@@ -620,10 +619,10 @@ footer{
 }
 .hot_sale .hot_main .hot_content ul li p:last-child a{
     display:block;
-    font-size:24px;
+    font-size:20px;
     line-height:30px;
     color:#e7283a;
-   padding-top: 15px;
+   padding-top: 10px;
 }
 
 /***********************1楼层******************************/
@@ -696,10 +695,10 @@ footer{
 }
 
 .floor  .floor_main .content ul li p a img{
-    width:160px;
-    height:160px;
+    width:140px;
+    height:140px;
     display:inline-block;
-    padding-top: 8px;
+    padding-top: 12px;
     vertical-align: bottom;
     transition: all 0.5s;
 }
@@ -717,10 +716,10 @@ footer{
     white-space: nowrap;
     text-align: center;
     overflow:hidden;
-    padding-top: 5px;
+    padding: 11px 0 5px 0;
 }
 .floor  .floor_main .content ul li span{
-    font-size:10px;
+    font-size:15px;
     color:#f74447;
     font-weight: 500;
 

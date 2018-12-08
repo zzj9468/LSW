@@ -13,8 +13,7 @@ a{
 .fr{
     float: right;
 }
-.cf:after,
-.cf:before{
+.cf:after{
     display:block;
     content:'';
     clear:both;
