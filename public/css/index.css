@@ -677,6 +677,7 @@ footer{
 .floor  .floor_main .content div a:first-child img{
     width:240px;
     height:430px;
+    padding-top: 28px;
 }
 
 .floor .floor_main .content ul{

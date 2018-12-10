@@ -85,7 +85,7 @@ a:hover{
 .details .details_main .top .img .img_md .move{
     width:230px;
     height: 230px;
-    position:relative;
+    position:absolute;
     background:#ffa;
     top:-230px;
     left:230px;
@@ -104,12 +104,12 @@ a:hover{
     width: 460px;
     height: 460px;
     background: #fff;
+    background-size: 920px 920px;
     border: 1px solid #ddd;
     top: 0;
     left: 460px;
     z-index: 100;
     position: absolute;
-    display:none;
 }
 .details .details_main .top .img .img_sm{
     width:470px;

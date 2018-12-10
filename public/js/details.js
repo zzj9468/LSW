@@ -64,32 +64,51 @@ window.onload=function(){
         itm2.innerHTML=html;
 
         /********************上左-图片*********************/
-        //中图
-        var img=document.querySelector('.details .details_main .top .img');
-        var md=img.children[0];
-        var html='';
-        for(var p of pics){
-            //console.log(p.iid);
-            html+=`<img src="${p.md}" class='${p.iid==1?"active":"hide"}'>`;
-        }
-        html+=`<div class="move hide"></div>
-        <div class="move_limit"></div>`;
-        md.innerHTML=html;
-        //大图
-        var lg=md.nextElementSibling;
-        html='';
-        for(var l of pics){
-        html+=`<img src="${l.md}" class="hide">`;
-        }
-        lg.innerHTML=html;
+
         //小图
         html='';
-        var sm=lg.nextElementSibling;
+        var sm=document.querySelector('.details .details_main .top .img .img_sm');
         for(var s of pics){
-            html+=`<li><img src="${s.sm}" data-md='s.md' data-lg='s.md'></li>
+            html+=`<li><img src="${s.sm}" data-md='${s.md}' data-lg='${s.md}'></li>
             `;
         }
         sm.children[0].innerHTML=html;
+        //中图
+        var md=document.querySelector('.details .details_main .top .img .img_md img');
+        var lg=document.querySelector('.details .details_main .top .img .img_lg');
+        //设置中图和小图的默认图片路径为第一张图片的路径
+        md.src=pics[0].md;
+        lg.src=pics[0].lg
+        sm.onmouseover=function(e){
+            if(e.target.nodeName=='IMG'){
+                var img=e.target;
+                //根据遍历小图片时自定义属性中中图片和大图片的路径
+                md.src=img.dataset.md;
+                lg.style.backgroundImage=`url(${img.dataset.lg})`;
 
+            }
+        }
+
+        var mask=document.querySelector('.details .details_main .top .img .img_md .move');
+        var mask_l=document.querySelector('.details .details_main .top .img .img_md .move_limit');
+        //鼠标移入移出时mask和大图片的显示和隐藏
+        mask_l.onmouseover=function(){
+           // console.log(mask);
+            mask.className=mask.className.replace('hide','');
+            lg.className=lg.className.replace('hide','');
+        }
+        mask_l.onmouseout=function(){
+            mask.className+=' hide';
+            lg.className+=' hide';
+        }
+        var msize=230;
+        mask_l.onmousemove=function(e){
+            var left=e.offsetX-msize/2;
+            var top=e.offsetY-msize/2;
+            //console.log(left,top);
+            mask.style.left=`${left}px`;
+            mask.style.top=`${top}px`;
+            lg.style.backgroundPosition=`-${left*2}px -${top*2}px`
+        }
     })
 }
