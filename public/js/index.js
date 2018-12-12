@@ -86,7 +86,7 @@ window.onload=function(){
         var h3_2_html=`<ul class="cf hidden">${tem(f3_2)}</ul>`;
         var h3_3_html=`<ul class="cf hidden">${tem(f3_3)}</ul>`;
         var h3_html=`<div>
-        <a href=""><img src="img/sm/3f.jpg" title="肉类制品"></a>
+        <a href=""><img src="img/sm/3f.jpg" title="原味糖果"></a>
         </div>${h3_1_html+h3_2_html+h3_3_html}</div>`;
         h3.innerHTML=h3_html;
 
@@ -96,7 +96,7 @@ window.onload=function(){
         var h4_1_html=`<ul class="cf active">${tem(f4_1)}</ul>`
         var h4_2_html=`<ul class="cf hidden">${tem(f4_2)}</ul>`;
         var h4_html=`<div>
-        <a href=""><img src="img/sm/4f.jpg" title="肉类制品"></a>
+        <a href=""><img src="img/sm/4f.jpg" title="蜜饯果干"></a>
         </div>${h4_1_html+h4_2_html}</div>`;
         h4.innerHTML=h4_html;
 
@@ -107,7 +107,7 @@ window.onload=function(){
         var h5_1_html=`<ul class="cf">${tem(f5_1)}</ul>`
        // console.log(tem(f5_1));
         var h5_html=`<div>
-        <a href=""><img src="img/sm/5f.jpg" title="肉类制品"></a>
+        <a href=""><img src="img/sm/5f.jpg" title="坚果炒货"></a>
         </div>${h5_1_html}</div>`;
         h5.innerHTML=h5_html;
 

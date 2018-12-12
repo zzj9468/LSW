@@ -78,7 +78,7 @@ window.onload=function(){
         var lg=document.querySelector('.details .details_main .top .img .img_lg');
         //设置中图和小图的默认图片路径为第一张图片的路径
         md.src=pics[0].md;
-        lg.src=pics[0].lg
+        lg.style.backgroundImage=`url("${pics[0].md}")`;
         sm.onmouseover=function(e){
             if(e.target.nodeName=='IMG'){
                 var img=e.target;
@@ -95,6 +95,8 @@ window.onload=function(){
         mask_l.onmouseover=function(){
            // console.log(mask);
             mask.className=mask.className.replace('hide','');
+            //console.log(mask_l);
+            //console.log(lg);
             lg.className=lg.className.replace('hide','');
         }
         mask_l.onmouseout=function(){
@@ -106,6 +108,18 @@ window.onload=function(){
             var left=e.offsetX-msize/2;
             var top=e.offsetY-msize/2;
             //console.log(left,top);
+            if(top<0){
+                top=0;
+            }
+            if(left<0){
+                left=0;
+            }
+            if(top>=230){
+                top=230;
+            }
+            if(left>=230){
+                left=230;
+            }
             mask.style.left=`${left}px`;
             mask.style.top=`${top}px`;
             lg.style.backgroundPosition=`-${left*2}px -${top*2}px`
