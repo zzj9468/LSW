@@ -3,16 +3,11 @@ const router=express.Router();
 const pool=require('../pool');
 
 router.post("/click",(req,res)=>{
-    var output={
-        click:{},
-        phone:{},
-        email:{},
-        uname:{}
-    };
     var uname=req.body.uname;
     var phone=req.body.phone;
     var email=req.body.email;
     var upwd=req.body.upwd;
+    console.log(upwd);
     var sql='INSERT INTO lsw_user(uname,phone,email,upwd) VALUES(?,?,?,?)';
     pool.query(sql,[uname,phone,email,upwd],(err,result)=>{
         if(err) throw err;
@@ -24,9 +19,9 @@ router.post("/click",(req,res)=>{
         }
 })
 })
-    router.get('/phone',(req,res)=>{
+    router.post('/phone',(req,res)=>{
             //手机号
-        var phone=req.query.phone; 
+        var phone=req.body.phone; 
         var sql='SELECT * FROM lsw_user WHERE phone=?';
         pool.query(sql,phone,(err,result)=>{
             if(err) throw err;
@@ -40,9 +35,9 @@ router.post("/click",(req,res)=>{
     })
 
 })
-    router.get('/uname',(req,res)=>{
+    router.post('/uname',(req,res)=>{
          //用户名
-    var uname=req.query.uname; 
+    var uname=req.body.uname; 
     var sql='SELECT * FROM lsw_user WHERE uname=?';
     pool.query(sql,uname,(err,result)=>{
         if(err) throw err;
@@ -54,9 +49,9 @@ router.post("/click",(req,res)=>{
     })
 })
 
-    router.get('/email',(req,res)=>{
+    router.post('/email',(req,res)=>{
         //邮箱
-    var email=req.query.email; 
+    var email=req.body.email; 
     var sql='SELECT * FROM lsw_user WHERE email=?';
     pool.query(sql,email,(err,result)=>{
         if(err) throw err;

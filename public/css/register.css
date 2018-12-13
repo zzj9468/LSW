@@ -23,6 +23,7 @@ a{
     content: '';
 }
 
+
 body{
     background: #f5f5f5;;
 }
@@ -91,11 +92,11 @@ header .header_main span:hover{
     display:inline-block;
     font-size:14px;
     color: rgb(51,51,51);
-    width:95px;
+    width:85px;
     height:36px;
     line-height: 36px;
-    text-align: right;
-
+    text-align: center;
+    margin-left:10px;
 }
 .content .content_main form input{
     width:280px;
@@ -107,6 +108,28 @@ header .header_main span:hover{
     background:#fff;
     padding: 1px 1px 1px 5px;
 }
+.content .content_main form input.in_ok{
+    background: url('../img/register/ok.png') 252px 6px no-repeat;
+    line-height: 40px
+}
+.content .content_main form input.in_error{
+    background: url('../img/register/error.png') 252px 6px no-repeat;
+    line-height: 40px
+}
+div.content div.content_main form div span.sp_ok{
+    color:green;
+    font-weight: 600;
+}
+div.content div.content_main form div span.sp_error{
+    color:red;
+    font-weight: 600;
+}
+.content .content_main form div:first-child~div span{
+    font-size: 12px;
+    color:#696969;
+    margin-left: 10px;
+}
+
 .content .content_main form .yanzheng,
 .content .content_main form .chb,
 .content .content_main form div:last-child{
@@ -116,7 +139,7 @@ header .header_main span:hover{
 .content .content_main form .yanzheng{
     margin-bottom: 25px;
 }
-.content .content_main form .yanzheng img{
+.content .content_main form .yanzheng canvas{
     margin-right:10px;
     width:90px;
     position:relative;
@@ -154,13 +177,16 @@ header .header_main span:hover{
     top:-13px;
 
 }
-.content .content_main form div:last-child button{
+.content .content_main form div:last-child input{
     width:290px;
     height:38px;
     background: #ffb000;
     padding:1px 6px 1px 6px;
     border:1px solid #ffb000;
     border-radius:5px;
+    color:#fff;
+    font-size: 16px;
+    text-align: center
 }
 .content .content_main .content_r{
     color:#999;
