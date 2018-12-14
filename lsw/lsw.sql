@@ -854,6 +854,9 @@ CREATE TABLE lsw_user(
 
 /**用户信息--插入数据**/
 INSERT INTO lsw_user VALUES
+(NULL, 'lala', '123456', 'la@qq.com', '13563259862'),
+(NULL, 'jing', '123456', 'jing@qq.com', '13256982146'),
+(NULL, 'ran', '123456', 'ran@qq.com', '13654692145'),
 (NULL, 'dingding', '123456', 'ding@qq.com', '13501234567'),
 (NULL, 'dangdang', '123456', 'dang@qq.com', '13501234568'),
 (NULL, 'doudou', '123456', 'dou@qq.com', '13501234569'),
