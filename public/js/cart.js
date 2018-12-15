@@ -17,7 +17,7 @@ $(function(){
             <td class="cf">
                 <div class="cf">
                     <a href="javascript:;">-</a>
-                    <input type="text" value="${c.count}">
+                    <span>${c.count}</span>
                     <a href="javascript:;">+</a>
                 </div>
             </td>

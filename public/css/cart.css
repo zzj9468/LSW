@@ -152,11 +152,14 @@ footer{
 .my_cart .my_cart_main table tbody tr td:nth-child(4),
 .my_cart .my_cart_main table tbody tr td:nth-child(5),
 .my_cart .my_cart_main table tbody tr td:nth-child(6),
-.my_cart .my_cart_main table tfoot tr td a,
+.my_cart .my_cart_main table tbody tr td:nth-child(7),
 .my_cart .my_cart_main table tbody tr td:nth-child(2),
 .my_cart .my_cart_main table tfoot tr td {
     color:#666;
     text-align: center;
+}
+.my_cart .my_cart_main table tbody tr td:nth-child(7) a{
+    color:#666;
 }
 .my_cart .my_cart_main table tbody tr td:nth-child(4) a{
     width:18px;
@@ -170,7 +173,7 @@ footer{
     float: left;
 }
 
-.my_cart .my_cart_main table tbody tr td:nth-child(4) input{
+.my_cart .my_cart_main table tbody tr td:nth-child(4) span{
     width:40px;
     height:23px;
     color:#999;
