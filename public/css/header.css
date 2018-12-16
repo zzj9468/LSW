@@ -20,7 +20,7 @@ a{
 .ct:before{
     display:table;
     content:'';
-}
+}   
 ul{
     list-style: none;
 }
@@ -107,7 +107,7 @@ footer{
 }
 .logo .logo_main ul:last-child li{
     float:left;
-    width:200px;
+    width:190px;
     height:34px;
     font-size:16px;
     line-height: 34px;

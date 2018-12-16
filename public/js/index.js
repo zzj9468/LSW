@@ -1,4 +1,4 @@
-window.onload=function(){
+$(function(){
     ajax({
         url:'http://localhost:3000/index',
         type:'get',
@@ -15,7 +15,7 @@ window.onload=function(){
         for(var c of carousel){
          var html=html+`<li><a href="${c.href}"><img src="${c.img}" alt="${c.tilte}"></a></li>`
 }        
-        var div=document.querySelector('.banner .banner_main .img');
+        var div=$('.banner .banner_main .img');
         div.innerHTML+=html;
 
 /***************右侧****************/
@@ -126,4 +126,4 @@ window.onload=function(){
 
         }
     })  
-}
+})

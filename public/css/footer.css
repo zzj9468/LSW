@@ -8,8 +8,7 @@ body{
 a{
     text-decoration: none;
 }
-.fl,
-.fr{
+.fl{
     float:left;
 }
 .cf:after{

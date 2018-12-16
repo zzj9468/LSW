@@ -29,6 +29,9 @@ ul{
 footer{
     width:100%;
 }
+.header{
+    height: 181px;
+}
 .header_main,.logo_main,.footer_main{
     width:1200px;
     margin: 0 auto;
@@ -50,6 +53,9 @@ footer{
     display:none;
 }
 /**********************banner************************/
+.banner .banner_main{
+    position: relative;
+}
 .banner .banner_main .menu{
     width:190px;
     height:385px;

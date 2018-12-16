@@ -1,6 +1,6 @@
-window.onload=function(){
+$(function(){
     var lid=location.search.slice(5)   //?lid=3
-    ajax({
+    $.ajax({
         url:'http://localhost:3000/details',
         type:'get',
         data:'lid='+lid,
@@ -8,6 +8,7 @@ window.onload=function(){
     }).then(res=>{
         console.log(res);
         var {product,pics}=res;
+        console.log(pics[0].sm);
         //console.log(product,pics);
         //console.log(product);
         
@@ -88,7 +89,7 @@ window.onload=function(){
 
             }
         }
-
+        /**********************放大镜效果************************ */
         var mask=document.querySelector('.details .details_main .top .img .img_md .move');
         var mask_l=document.querySelector('.details .details_main .top .img .img_md .move_limit');
         //鼠标移入移出时mask和大图片的显示和隐藏
@@ -124,5 +125,27 @@ window.onload=function(){
             mask.style.top=`${top}px`;
             lg.style.backgroundPosition=`-${left*2}px -${top*2}px`
         }
+        $('.details>.details_main>.top>.info>.btn>span>a').on('click',function(){
+            var {title,price,guige,jifen}=product;
+            var pic=pics[0].sm;
+            var href=`details.html?lid=${lid}`;
+            var count=$('.details>.details_main>.top>.info>.num>ul>li>input').val();
+            if($(this).is('a')){
+                $.ajax({
+                    url:'http://127.0.0.1:3000/cart/addCart',
+                    type:'post',
+                    data:{lid,title,href,pic,price,count,jifen,guige},
+                    dataType:'json',
+                }).then(res=>{
+                    //console.log(res);
+                    if($(this).is($(this).parent().children(':first-child'))){
+                        alert(res.msg);
+                    }else{
+                        location.href='cart.html';
+                    }
+                })
+            }
+        })
+
     })
-}
+})
