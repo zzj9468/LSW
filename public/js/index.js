@@ -1,5 +1,5 @@
 $(function(){
-    ajax({
+    $.ajax({
         url:'http://localhost:3000/index',
         type:'get',
         //data:--因为后端测试时没有加？所以不用加data==undefined
@@ -125,10 +125,40 @@ $(function(){
             return html;
 
         }
-        //左侧菜单栏
-        $('.banner>.banner_main>.menu>.menu_list>h3>a').on('click',function(){
-            var a=$(this);
-            console.log(('.banner>.banner_main>.menu>.menu_list>h3>a'));
+        //banner上面菜单栏
+        $('.banner>.banner_main>.menu>.menu_list>h3').on('mouseenter',function(){
+            var h=$(this);
+            //console.log($('.banner>.banner_main>.menu>.menu_list>h3'));
+            if(h.next().hasClass('hidden')){
+                h.next().removeClass('hidden').parent().siblings().children('div').addClass('hidden');
+            }else{
+                h.parent().siblings().children('div').addClass('hidden');
+
+            }
+        })
+        $('.banner>.banner_main>.menu>.menu_list').on('mouseleave',function(){
+            $('.banner>.banner_main>.menu>.menu_list>div').addClass('hidden');
+        })
+        //楼层标题点击时
+        $('.floor1>.floor_main>.title>ul>li').on('click',function(){
+            console.log($('.floor1>.floor_main>.title>ul>li'));
+            var li=$(this);
+            var length=parseInt($('.floor1>.floor_main>.title>ul>li').length);
+            //console.log(li);
+            console.log(length);
+            console.log($(this).index())
+            //console.log(li.html());
+            var i=length-1-parseInt($(this).index());
+            console.log(i);
+            var uls=li.parent().parent().next().children('ul');
+            var ul=uls[i];
+            console.log(ul);
+            //console.log(ul.hasClass('hidden'));
+            if(ul.hasClass('hidden')){
+                ul.removeClass('hidden').siblings().addClass('hidden');
+            }else{
+                ul.addClass('active').siblings().addClass('hidden');
+            }
         })
     })  
 })
