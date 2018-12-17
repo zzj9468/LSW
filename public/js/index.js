@@ -125,5 +125,10 @@ $(function(){
             return html;
 
         }
+        //左侧菜单栏
+        $('.banner>.banner_main>.menu>.menu_list>h3>a').on('click',function(){
+            var a=$(this);
+            console.log(('.banner>.banner_main>.menu>.menu_list>h3>a'));
+        })
     })  
 })

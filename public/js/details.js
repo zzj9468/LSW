@@ -125,6 +125,7 @@ $(function(){
             mask.style.top=`${top}px`;
             lg.style.backgroundPosition=`-${left*2}px -${top*2}px`
         }
+        
         $('.details>.details_main>.top>.info>.btn>span>a').on('click',function(){
             var {title,price,guige,jifen}=product;
             var pic=pics[0].sm;
@@ -146,6 +147,50 @@ $(function(){
                 })
             }
         })
+        //送至
+        $('.details>.details_main>.top>.info>.store>.address>.add_top>span').on('click',function(){
+            var span=$(this);
+            //console.log(span);
+            var dl=span.parent().next();
+            if(dl.hasClass('hide')){
+                $('.details>.details_main>.top>.info>.store>.address>dl').removeClass('hide');
+                //console.log(dl.children(1).children());
+                   dl.children(1).children().on('click',function(){
+                        var a=$(this);
+                            span.html(a.html());
+                            console.log(span);
+                            $('.details>.details_main>.top>.info>.store>.address>dl').addClass('hide');
 
+                   })   
+       
+            }else{
+                $('.details>.details_main>.top>.info>.store>.address>dl').addClass('hide');
+            }
+        })
+        //数量
+        $('.details>.details_main>.top>.info>.num>ul>li>a').on('click',function(){
+            var a=$(this);
+            console.log(a);
+            var i=$('.details>.details_main>.top>.info>.num>ul>li:nth-child(2)>input').val();
+            console.log(i)
+            if(a.html()=='+')
+                i++;
+            else if(i>1)
+                i--;
+                $('.details>.details_main>.top>.info>.num>ul>li:nth-child(2)>input').val(i);
+        })
+        //下方零食详情、点评、配送、服务保障
+        var as=$('.details> .bottom>.bt_left>.bt_info>.bt_list>ul>li>a');
+        //console.log($('.details>.bottom>.bt_left>.bt_info>.item>.bt_info_item2').html());
+        as.on('click',function(){ 
+            var a=$(this);
+            var i=a.parent().index();
+            var item=$(`.details>.bottom>.bt_left>.bt_info>.item>.bt_info_item${i+1}`);
+            if($(item.hasClass('hide'))){
+               item.removeClass('hide').siblings().addClass('hide');
+            }else{
+                item.siblings().addClass('hide');
+            }
+        });
     })
 })

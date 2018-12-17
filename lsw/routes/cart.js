@@ -19,12 +19,12 @@ router.post('/addCart',(req,res)=>{
     var count=req.body.count;
     var jifen=req.body.jifen;
     var guige=req.body.guige;
-    console.log(lid);
-    console.log(count);
+    //console.log(lid);
+   // console.log(count);
     var sql='SELECT * FROM lsw_cart WHERE lid=?';
     pool.query(sql,lid,(err,result)=>{
         if(err) throw err;
-        console.log(result);
+        //console.log(result);
         if(result.length==0){
             var sql='INSERT INTO lsw_cart(lid,title,href,pic,price,count,jifen,guige) VALUES(?,?,?,?,?,?,?,?)';
             pool.query(sql,[lid,title,href,pic,price,count,jifen,guige],(err,result)=>{
@@ -40,11 +40,11 @@ router.post('/addCart',(req,res)=>{
             var sql='SELECT count FROM lsw_cart WHERE lid=?';
             pool.query(sql,lid,(err,result)=>{
                 if(err) throw err;
-                console.log(result);
-                var c=Number(result[0].count);
-                
+                //console.log(result);
+                var c=parseInt(result[0].count);
+                console.log(result[0].count);
                 console.log(c);
-                
+                count=parseInt(count);
                 console.log(c+count);
                 var sql='UPDATE lsw_cart SET count=? WHERE lid=?';
                 pool.query(sql,[c+count,lid],(err,result)=>{
