@@ -9,9 +9,9 @@ router.post('/email',(req,res)=>{
         var sql='SELECT * FROM lsw_user WHERE email=? AND upwd=?';
         pool.query(sql,[email,upwd],(err,result)=>{
             if(err) throw err;
-             //console.log(result);
+             console.log(result);
             if(result.length>0){
-                res.send({code:1,msg:'登录成功'});
+                res.send({code:1,msg:'登录成功',uid:result[0].uid});
             }else{
                 res.send({code:0,msg:'登陆失败'});
             }
@@ -25,9 +25,9 @@ router.post('/uname',(req,res)=>{
         var sql='SELECT * FROM lsw_user WHERE uname=? AND upwd=?';
         pool.query(sql,[uname,upwd],(err,result)=>{
             if(err) throw err;
-           // console.log(result);
+           console.log(result);
             if(result.length>0){
-                res.send({code:1,msg:'登录成功'});
+                res.send({code:1,msg:'登录成功',uid:result[0].uid});
             }else{
                 res.send({code:0,msg:'登陆失败'});
             }

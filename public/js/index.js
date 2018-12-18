@@ -2,10 +2,12 @@ $(function(){
     $('.header').load('header.html');
     $('.footer').load('footer.html');
     var uname=sessionStorage.getItem('uname');
+    var uid=sessionStorage.getItem('uid');
+    //console.log(uid);
     $.ajax({
         url:'http://localhost:3000/index',
         type:'get',
-       data:'uname='+uname, //--因为后端测试时没有加？所以不用加data==undefined
+       data:'uid='+uid, //--因为后端测试时没有加？所以不用加data==undefined
         dataType:'json'  //告诉ajax将json字符串转换为对象
     })
     .then(res=>{
@@ -233,7 +235,7 @@ $(function(){
             $('html,body').animate({scrollTop:`${i*550+400}px`}, 600);
         })
         //右侧购物车    
-        if(sessionStorage.getItem('uname')){
+        if(uname){
             //console.log(res.cart);
             $('.right>.right-menu>li:first-child>span').html(res.cart.length).parent().on('click',function(){
                 $('.right>.cart>.to_buy>p>span:nth-child(2)').html(res.cart.length);

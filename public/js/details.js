@@ -96,8 +96,6 @@ $(function(){
         mask_l.onmouseover=function(){
            // console.log(mask);
             mask.className=mask.className.replace('hide','');
-            //console.log(mask_l);
-            //console.log(lg);
             lg.className=lg.className.replace('hide','');
         }
         mask_l.onmouseout=function(){
@@ -125,9 +123,13 @@ $(function(){
             mask.style.top=`${top}px`;
             lg.style.backgroundPosition=`-${left*2}px -${top*2}px`
         }
-        
+        //添加购物车
         $('.details>.details_main>.top>.info>.btn>span>a').on('click',function(){
             var {title,price,guige,jifen}=product;
+            var uid=sessionStorage.getItem('uid');
+            var uname=sessionStorage.getItem('uname');
+            console.log(uid);
+            console.log(uname);
             var pic=pics[0].sm;
             var href=`details.html?lid=${lid}`;
             var count=$('.details>.details_main>.top>.info>.num>ul>li>input').val();
@@ -135,7 +137,7 @@ $(function(){
                 $.ajax({
                     url:'http://127.0.0.1:3000/cart/addCart',
                     type:'post',
-                    data:{lid,title,href,pic,price,count,jifen,guige},
+                    data:{lid,uid,uname,title,href,pic,price,count,jifen,guige},
                     dataType:'json',
                 }).then(res=>{
                     //console.log(res);
