@@ -5,8 +5,8 @@ var pool=require('../pool');
 //测试地址：http://127.0.0.1:3000/index
 router.get('/',(req,res)=>{
     var output={};
-
-
+    var uname=req.query.uname;
+    //console.log(uname);
     var sqls={
         miaosha:'SELECT * FROM lsw_index_miaosha',
         hot:'SELECT * FROM lsw_index_hot',
@@ -22,7 +22,7 @@ router.get('/',(req,res)=>{
         f4_1:'SELECT * FROM lsw_index_product WHERE fid=4 LIMIT 0,8',
         f4_2:'SELECT * FROM lsw_index_product WHERE fid=4 LIMIT 8,8',
         f5_1:'SELECT * FROM lsw_index_product WHERE fid=5',
-        cart:'SELECT * FROM lsw_cart',
+        cart:`SELECT * FROM lsw_cart WHERE uname='${uname}'`,
         carousel:'SELECT * FROM lsw_index_carousel'
     }
 

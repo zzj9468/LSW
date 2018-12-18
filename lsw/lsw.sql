@@ -866,6 +866,7 @@ INSERT INTO lsw_user VALUES
 CREATE TABLE lsw_cart(
   cid INT PRIMARY KEY AUTO_INCREMENT,
   lid INT,
+  uname VARCHAR(16),
   title VARCHAR(128),
   href VARCHAR(32),
   pic VARCHAR(32),
@@ -876,12 +877,20 @@ CREATE TABLE lsw_cart(
 );
 /**购物车--插入数据**/
 INSERT INTO lsw_cart VALUES
-    (NULL,43,'母亲牛肉棒原味22g','details.html?lid=43','img/details/sm/f2_11_sm1.jpg',5.50,1,5,68),
-    (NULL,25,'格力高百力滋蓝莓芝士味45g', 'details.html?lid=25','img/details/sm/f1_25_sm1.jpg',4.00,1,4,63),
-    (NULL,74,'溜梅梅大大黄梅400g', 'details.html?lid=74','img/details/sm/f4_02_sm1.jpg',30.00,2,60,430),
-    (NULL,95,'TOMS蜂蜜黄油扁桃仁35g','details.html?lid=95','img/details/sm/f5_08_sm1.jpg',5.50,1,5,40),
-    (NULL,88,'淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
-    (NULL,2,'丽能压缩饼干葱油味*500g', 'details.html?lid=2','img/details/sm/f1_02_sm1.jpg',19.80,2,38,500);
+    (NULL,43,'jing','母亲牛肉棒原味22g','details.html?lid=43','img/details/sm/f2_11_sm1.jpg',5.50,1,5,68),
+    (NULL,25,'lala','格力高百力滋蓝莓芝士味45g','details.html?lid=25','img/details/sm/f1_25_sm1.jpg',4.00,1,4,63),
+    (NULL,74,'jing','溜梅梅大大黄梅400g', 'details.html?lid=74','img/details/sm/f4_02_sm1.jpg',30.00,2,60,430),
+    (NULL,95,'jing','TOMS蜂蜜黄油扁桃仁35g','details.html?lid=95','img/details/sm/f5_08_sm1.jpg',5.50,1,5,40),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,88,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
+    (NULL,2,'jing','丽能压缩饼干葱油味*500g', 'details.html?lid=2','img/details/sm/f1_02_sm1.jpg',19.80,2,38,500);
 
 
 

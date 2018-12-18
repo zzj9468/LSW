@@ -18,7 +18,9 @@ $(function(){
                     if(res.code<1){
                         alert(`登录失败，请检查用户名、密码是否正确`);
                     } else{
+                        sessionStorage.setItem('uname',uname);
                         alert('登陆成功');
+                        location.href='index.html';
                     }
                 }
             })
@@ -33,7 +35,10 @@ $(function(){
                         if(res.code<1){
                         alert(`登录失败，请检查用户名、密码是否正确`);
                     } else{
+                        sessionStorage.setItem('uname',uname);
                         alert('登陆成功');
+                        location.href='index.html';
+
                     }
                 }
             })

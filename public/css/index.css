@@ -8,8 +8,7 @@ body{
 a{
     text-decoration: none;
 }
-.fl,
-.fr{
+.fl{
     float:left;
 }
 .cf:after{
@@ -31,6 +30,7 @@ footer{
 }
 .header{
     height: 181px;
+    z-index: 1000000;
 }
 .header_main,.logo_main,.footer_main{
     width:1200px;
@@ -53,13 +53,22 @@ footer{
     display:none;
 }
 /**********************banner************************/
+.banner{
+    position: relative;
+    top:160px;
+    height: 400px;
+    margin-bottom: 40px;
+}
 .banner .banner_main{
     position: relative;
+    height:385px;
 }
 .banner .banner_main .menu{
     width:190px;
     height:385px;
-    float:left;
+    position: relative;
+    top:2px;
+
 
 
 }
@@ -234,11 +243,20 @@ footer{
 .it11{
     top:-345px;
 }
+.banner .banner_main .menu  .menu_list:nth-child(4) h3 a{
+    position: absolute;
+}
+.banner .banner_main .menu  .menu_list:nth-child(5) h3 a{
+    position: relative;
+    top:-22px;
+
+}
 .banner .banner_main .img{
     width:4800px;
     float: left;
-    position:absolute;
-    top:2px;
+    position: relative;
+    top:-382px;
+    z-index:-10;
 }
 .banner .banner_main .img li{
     float:left;
@@ -296,7 +314,9 @@ footer{
     text-align: center;
     transition:all .3s;
 }
-.left .left_main ul li:hover{
+.left .left_main ul li:hover,
+.left .left_main ul li.click
+{
     background:#d70b1c;
     transform: translateX(1px);
     border-top:1px solid #fff;
@@ -360,7 +380,7 @@ footer{
 }
 .right .right-menu li:first-child span{
     border-radius:20px;
-    padding:3px 8px;
+    padding:3px 6px;
     background: #d50039;
     color:#fff;
     margin-top:10px;
@@ -458,9 +478,9 @@ footer{
 
 }
 .right .cart .to_buy{
-    position:relative;
-    left:12px;
-    bottom:-290px;
+    position:absolute;
+    left:50px;
+    bottom:0;
     height:76px;
     background:#fff;
 }
@@ -489,6 +509,9 @@ footer{
 }
 
     /*********************秒杀**********************/
+    .sec_kill{
+        margin-top: 30px;
+    }
 .sec_kill .kill_main .title{
     padding:40px 0 10px 0;
 }
@@ -510,13 +533,14 @@ footer{
 .sec_kill .kill_main .title .date,
 .sec_kill .kill_main .title .minute,
 .sec_kill .kill_main .title .second{
-    width:28px;
-    height: 28px;
-    background:#111;
+    width:40px;
+    height: 40px;
     text-align: center;
-    color:#fff;
-    border-radius:4px;
+    color:#b00002;;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight:700;
+    font-style: italic;
 }
 .sec_kill .kill_main .kill-content{
     margin-top:5px;
@@ -569,7 +593,7 @@ footer{
 }
 /***********************热卖*******************************/
 .hot_sale{
-    margin-top:25px;
+    margin:40px 0; 
 }
 .hot_sale .hot_main .title {
     width:230px;
@@ -755,4 +779,7 @@ footer{
     text-align: center;
     line-height: 215px;
     font-weight: 600;
+}
+.floor5{
+    margin-bottom: 40px;
 }

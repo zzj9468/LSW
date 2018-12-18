@@ -186,7 +186,7 @@ $(function(){
             var a=$(this);
             var i=a.parent().index();
             var item=$(`.details>.bottom>.bt_left>.bt_info>.item>.bt_info_item${i+1}`);
-            if($(item.hasClass('hide'))){
+            if(item.hasClass('hide')){
                item.removeClass('hide').siblings().addClass('hide');
             }else{
                 item.siblings().addClass('hide');

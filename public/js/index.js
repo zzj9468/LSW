@@ -1,8 +1,11 @@
 $(function(){
+    $('.header').load('header.html');
+    $('.footer').load('footer.html');
+    var uname=sessionStorage.getItem('uname');
     $.ajax({
         url:'http://localhost:3000/index',
         type:'get',
-        //data:--因为后端测试时没有加？所以不用加data==undefined
+       data:'uname='+uname, //--因为后端测试时没有加？所以不用加data==undefined
         dataType:'json'  //告诉ajax将json字符串转换为对象
     })
     .then(res=>{
@@ -15,8 +18,9 @@ $(function(){
         for(var c of carousel){
          var html=html+`<li><a href="${c.href}"><img src="${c.img}" alt="${c.tilte}"></a></li>`
 }        
-        var div=$('.banner .banner_main .img');
-        div.innerHTML+=html;
+        var div=$('.banner>.banner_main>.img');
+        //console.log(div);
+        div.html(html);
 
 /***************右侧****************/
         html='';
@@ -125,10 +129,11 @@ $(function(){
             return html;
 
         }
+        //登录
+
         //banner上面菜单栏
         $('.banner>.banner_main>.menu>.menu_list>h3').on('mouseenter',function(){
             var h=$(this);
-            //console.log($('.banner>.banner_main>.menu>.menu_list>h3'));
             if(h.next().hasClass('hidden')){
                 h.next().removeClass('hidden').parent().siblings().children('div').addClass('hidden');
             }else{
@@ -140,25 +145,112 @@ $(function(){
             $('.banner>.banner_main>.menu>.menu_list>div').addClass('hidden');
         })
         //楼层标题点击时
+        //1
         $('.floor1>.floor_main>.title>ul>li').on('click',function(){
-            console.log($('.floor1>.floor_main>.title>ul>li'));
             var li=$(this);
-            var length=parseInt($('.floor1>.floor_main>.title>ul>li').length);
-            //console.log(li);
-            console.log(length);
-            console.log($(this).index())
-            //console.log(li.html());
-            var i=length-1-parseInt($(this).index());
-            console.log(i);
-            var uls=li.parent().parent().next().children('ul');
-            var ul=uls[i];
-            console.log(ul);
-            //console.log(ul.hasClass('hidden'));
+        btn(1,li);
+        })
+        //2
+        $('.floor2>.floor_main>.title>ul>li').on('click',function(){
+            var li=$(this);
+        btn(2,li);
+        })
+        //3
+        $('.floor3>.floor_main>.title>ul>li').on('click',function(){
+            var li=$(this);
+        btn(3,li);
+        })
+
+        //4
+        $('.floor4>.floor_main>.title>ul>li').on('click',function(){
+            var li=$(this);
+        btn(4,li);
+        })
+
+        //5
+        $('.floor5>.floor_main>.title>ul>li').on('click',function(){
+            var li=$(this);
+        btn(5,li);
+        })
+        //楼层调用函数
+        function btn(f,li){
+            var length=parseInt($(`.floor${f}>.floor_main>.title>ul>li`).length);
+            var i=length-parseInt(li.index());
+           var ul=$(`.floor${f}>.floor_main>.content>ul:nth-child(${i+1})`);
             if(ul.hasClass('hidden')){
-                ul.removeClass('hidden').siblings().addClass('hidden');
+                ul.removeClass('hidden').addClass('active').siblings("ul").addClass('hidden');
             }else{
-                ul.addClass('active').siblings().addClass('hidden');
+                ul.addClass('active').siblings("ul").removeClass('active').addClass('hidden');
+            }
+
+        }
+        //左侧导航
+        $(window).scroll(function(){
+            var item=$('.left>.left_main>ul>li');
+            //console.log($(window).scrollTop());
+           // console.log(item)
+           if($(window).scrollTop()<400){
+            $('.left>.left_main>ul>li').removeClass('click');
+           } else if($(window).scrollTop()<800){
+                //console.log($('.left>.left_main>ul>li:first-child'));
+                if(!$('.left>.left_main>ul>li:first-child').hasClass('click'))
+                $('.left>.left_main>ul>li:first-child').addClass('click')
+                $('.left>.left_main>ul>li:first-child').siblings().removeClass('click')
+            }else if($(window).scrollTop()<1200){
+                if(!$('.left>.left_main>ul>li:nth-child(2)').hasClass('click'))
+                $('.left>.left_main>ul>li:nth-child(2)').addClass('click')
+                $('.left>.left_main>ul>li:nth-child(2)').siblings().removeClass('click')
+
+            }else if($(window).scrollTop()<1800){
+                if(!$('.left>.left_main>ul>li:nth-child(3)').hasClass('click'))
+                $('.left>.left_main>ul>li:nth-child(3)').addClass('click')
+                $('.left>.left_main>ul>li:nth-child(3)').siblings().removeClass('click')
+
+            }else if($(window).scrollTop()<2400){
+                if(!$('.left>.left_main>ul>li:nth-child(4)').hasClass('click'))
+                $('.left>.left_main>ul>li:nth-child(4)').addClass('click')
+                $('.left>.left_main>ul>li:nth-child(4)').siblings().removeClass('click')
+
+            }else if($(window).scrollTop()<3000){
+                if(!$('.left>.left_main>ul>li:nth-child(5)').hasClass('click'))
+                $('.left>.left_main>ul>li:nth-child(5)').addClass('click')
+                $('.left>.left_main>ul>li:nth-child(5)').siblings().removeClass('click')
+
+            }else if($(window).scrollTop()<3500){
+                if(!$('.left>.left_main>ul>li:nth-child(6)').hasClass('click'))
+                $('.left>.left_main>ul>li:nth-child(6)').addClass('click')
+                $('.left>.left_main>ul>li:nth-child(6)').siblings().removeClass('click')
+
+            }else{
+                if(!$('.left>.left_main>ul>li:nth-child(7)').hasClass('click'))
+                $('.left>.left_main>ul>li:nth-child(7)').addClass('click')
+                $('.left>.left_main>ul>li:nth-child(7)').siblings().removeClass('click')
+
             }
         })
+        $('.left>.left_main>ul>li').on('click',function(){
+            var i=$(this).index();
+            $('html,body').animate({scrollTop:`${i*550+400}px`}, 600);
+        })
+        //右侧购物车    
+        if(sessionStorage.getItem('uname')){
+            //console.log(res.cart);
+            $('.right>.right-menu>li:first-child>span').html(res.cart.length).parent().on('click',function(){
+                $('.right>.cart>.to_buy>p>span:nth-child(2)').html(res.cart.length);
+                var li=$(this);
+                if(li.parent().next('.cart').hasClass('hidden')){
+                    li.parent().next('.cart').removeClass('hidden');
+                }else{
+                    li.parent().next('.cart').addClass('hidden');
+
+                }
+            })
+
+        }else{
+            $('.right>.right-menu>li:first-child>span').html('0');
+
+        }
+        //计时
+        
     })  
 })

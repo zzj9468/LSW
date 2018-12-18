@@ -7,21 +7,22 @@
 </head>
 <body>
 <!--01----------------------------header--------------------------->
-<div class="header">
+<div class="header cf">
     <div class="header_main">
         <ul class="cf">
             <span>欢迎来到商城!</span>
             <li><a href="">客户服务</a></li>
             <li>
                 <img src="img/index/phone.png" alt="">
-                <a href="">掌上商城∨</a></li>
-            <li><a href="">登录</a></li>
-            <li><a href="">注册</a></li>
+                <a href="javascript:;">掌上商城∨</a>
+            </li>
+            <li><a href="login.html">登录</a></li>
+            <li><a href="register.html">注册</a></li>
         </ul>
     </div>
 </div>
 <!--02----------------------------logo-------------------------->
-<div class="logo">
+<div class="logo cf">
     <div class="logo_main">
         <ul class="cf">
             <li class="cf"><a href="index.html"><img src="img/index/logo.png" alt=""></a></li>
@@ -46,6 +47,22 @@
         </ul>
     </div>
 </div>
-
+<script>
+    var uname=sessionStorage.getItem('uname');
+    //console.log(uname);
+    //console.log($('.header>.header_main>ul>li:nth-child(4)>a'));
+    var login=$('.header>.header_main>ul>li:nth-child(4)>a');
+    var register=$('.header>.header_main>ul>li:nth-child(5)>a');
+    if(uname){
+    var html=`${uname}&nbsp;&nbsp;欢迎回来`;
+    register.html(html).attr('href','javascript:;'); 
+    login.attr('href','javascript:;');
+    login.html('退出').on('click',function(){
+        sessionStorage.removeItem('uname');
+        location.replace('index.html');
+        
+    })
+    }
+</script>
 </body>
 </html>
