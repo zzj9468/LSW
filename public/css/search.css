@@ -260,6 +260,9 @@ ul{
     color:#444;
     font-size: 12px;
     padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .search .search_main .container_info .lists ul li p:last-child{
     color:#e61940;

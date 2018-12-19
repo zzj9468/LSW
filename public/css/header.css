@@ -76,6 +76,7 @@ footer{
 }
 .logo .logo_main :first-child li:nth-child(2){
     margin-left:260px;
+    position: relative;
 }
 .logo .logo_main input{
     width:340px;
@@ -93,8 +94,11 @@ footer{
     margin-left:-10px;
     margin-top: 2px;
     cursor: pointer;
-    padding-bottom: 4px;
+    padding-bottom: 7px;
     font-size:16px;
+    position: absolute;
+    top:-2px;
+    right: 0;
 }
 .logo .logo_main ul li p{
     margin-top:6px;
