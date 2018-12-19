@@ -69,7 +69,7 @@ ul{
     height:35px;
     line-height:35px;
     position:relative;
-    font-size:13px;
+    font-size:15px;
     font-weight: 600;
     text-align:left;
     color:#fff;
@@ -284,6 +284,7 @@ ul{
     padding:3px 7px;
     border:1px solid #bbb;
     color:#666;
+    border-radius: 15px;
 }
 .search .search_main .container_info .page .a_hover{
     background: #ff8100;

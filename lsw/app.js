@@ -8,6 +8,7 @@ const login=require('./routes/login.js');
 const index=require('./routes/index.js');
 const details=require('./routes/details');
 const cart=require('./routes/cart');
+const search=require('./routes/search');
 
 
 var app=express();
@@ -39,3 +40,4 @@ app.use('/login',login);
 app.use('/index',index);
 app.use('/details',details);
 app.use('/cart',cart);
+app.use('/search',search);

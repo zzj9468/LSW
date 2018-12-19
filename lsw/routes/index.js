@@ -23,7 +23,7 @@ router.get('/',(req,res)=>{
         f4_1:'SELECT * FROM lsw_index_product WHERE fid=4 LIMIT 0,8',
         f4_2:'SELECT * FROM lsw_index_product WHERE fid=4 LIMIT 8,8',
         f5_1:'SELECT * FROM lsw_index_product WHERE fid=5',
-        cart:`SELECT * FROM lsw_cart WHERE uid='${uid}'`,
+        cart:`SELECT * FROM lsw_cart WHERE uid=${uid}`,
         carousel:'SELECT * FROM lsw_index_carousel'
     }
 

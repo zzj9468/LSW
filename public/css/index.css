@@ -53,12 +53,7 @@ footer{
     display:none;
 }
 /**********************banner************************/
-.banner{
-    position: relative;
-    top:160px;
-    height: 400px;
-    margin-bottom: 40px;
-}
+
 .banner .banner_main{
     position: relative;
     height:385px;
@@ -67,7 +62,6 @@ footer{
     width:190px;
     height:385px;
     position: relative;
-    top:2px;
 
 
 
@@ -92,7 +86,7 @@ footer{
     height:35px;
     line-height:35px;
     position:relative;
-    font-size:13px;
+    font-size:15px;
     font-weight: 600;
     text-align:left;
     color:#fff;
@@ -243,19 +237,12 @@ footer{
 .it11{
     top:-345px;
 }
-.banner .banner_main .menu  .menu_list:nth-child(4) h3 a{
-    position: absolute;
-}
-.banner .banner_main .menu  .menu_list:nth-child(5) h3 a{
-    position: relative;
-    top:-22px;
 
-}
 .banner .banner_main .img{
     width:4800px;
     float: left;
-    position: relative;
-    top:-382px;
+    position: absolute;
+    top:0;
     z-index:-10;
 }
 .banner .banner_main .img li{
@@ -270,7 +257,7 @@ footer{
 }
 .banner .banner_main .img li a img{
     width:1200px;
-    height:383px;
+    height:385px;
     vertical-align: middle;
 }
 .banner .banner_main .circle{
@@ -509,11 +496,9 @@ footer{
 }
 
     /*********************秒杀**********************/
-    .sec_kill{
-        margin-top: 30px;
-    }
+
 .sec_kill .kill_main .title{
-    padding:40px 0 10px 0;
+    padding:40px 0 0 0;
 }
 .sec_kill .kill_main .title span {
     font-size:10px;

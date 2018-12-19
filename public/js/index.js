@@ -1,6 +1,4 @@
 $(function(){
-    $('.header').load('header.html');
-    $('.footer').load('footer.html');
     var uname=sessionStorage.getItem('uname');
     var uid=sessionStorage.getItem('uid');
     //console.log(uid);

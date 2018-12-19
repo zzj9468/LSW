@@ -62,7 +62,7 @@ footer{
 
 /*02---------------------------logo-----------------------*/
 .logo{
-    height:160px;
+    height:157px;
     border-bottom: 2px solid #ffb000;
 }
 .logo .logo_main{
@@ -81,6 +81,7 @@ footer{
     width:340px;
     height:35px;
     border:2px solid #ffc400;
+    padding-left: 5px;
 }
 .logo .logo_main button{
     width:80px;
@@ -103,7 +104,10 @@ footer{
 }
 .logo .logo_main ul li p a{
     color:#666;
-    margin-right:5px;
+    margin-right:8px;
+}
+.logo .logo_main ul:last-child{
+    margin-top: 20px;
 }
 .logo .logo_main ul:last-child li{
     float:left;
