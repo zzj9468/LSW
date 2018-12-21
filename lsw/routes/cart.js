@@ -15,8 +15,8 @@ router.post('/addCart',(req,res)=>{
     var lid=req.body.lid;
     var uid=req.body.uid;
     var uname=req.body.uname;
-    console.log(uid);
-    console.log(uname);
+    //console.log(uid);
+    //console.log(uname);
     var title=req.body.title;
     var href=req.body.href;
     var pic=req.body.pic;
@@ -29,7 +29,7 @@ router.post('/addCart',(req,res)=>{
     var sql='SELECT * FROM lsw_cart WHERE lid=? AND uid=?';
     pool.query(sql,[lid,uid],(err,result)=>{
         if(err) throw err;
-        console.log(result);
+        //console.log(result);
         if(result.length==0){
             var sql='INSERT INTO lsw_cart(lid,uid,uname,title,href,pic,price,count,jifen,guige) VALUES(?,?,?,?,?,?,?,?,?,?)';
             pool.query(sql,[lid,uid,uname,title,href,pic,price,count,jifen,guige],(err,result)=>{
@@ -68,6 +68,30 @@ router.post('/addCart',(req,res)=>{
 
 
     })
+});
+
+
+
+router.post('/upCart',(req,res)=>{
+    var lid=req.body.lid;
+    var uid=req.body.uid;
+    var count=req.body.count;
+    //console.log(lid);
+   // console.log(count);
+
+    var sql='UPDATE lsw_cart SET count=? WHERE lid=? AND uid=?';
+    pool.query(sql,[count,lid,uid],(err,result)=>{
+        if(err) throw err;
+        console.log(result);
+        if(result.affectedRows>0){
+            res.send({code:1,msg:'添加购物车成功'});
+        }else{
+            res.send({code:0,msg:"商品添加失败"});
+        }
+
+    })
+
+
 });
 
 module.exports=router;
