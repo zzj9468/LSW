@@ -1,5 +1,7 @@
 $(function(){
     var lid=location.search.slice(5)   //?lid=3
+    var uname=sessionStorage.getItem('uname');
+    var uid=sessionStorage.getItem('uid');
     $.ajax({
         url:'http://localhost:3000/details',
         type:'get',
@@ -7,45 +9,30 @@ $(function(){
         dataType:'json'
     }).then(res=>{
         console.log(res);
-        var {product,pics}=res;
-        console.log(pics[0].sm);
-        //console.log(product,pics);
-        //console.log(product);
-        
+        var {product,pics}=res;        
 /********************面包屑*********************/
-        var crumb=document.querySelector('.details .details_main .top .crumb p  span');
+        var crumb=$('.details .details_main .top .crumb p  span');
         var html_crumb=` >  ${product.zhonglei} > ${product.title}`;
-        crumb.innerHTML=html_crumb;
+        crumb.html(html_crumb);
 
     
 /*********************上右--详情*********************/
-        var h3=document.querySelector('.details .details_main .top .info h3');
-        h3.innerHTML=product.title;
-        var price=h3.nextElementSibling.children[0].children[0];
-        price.innerHTML=`￥${product.price.toFixed(2)}`;
-        //节省
-        price.nextElementSibling.children[1].innerHTML=`为您节省￥${(product.prev_price-product.yh_price).toFixed(2)}`;
-        //市场价
-        price.nextElementSibling.children[2].innerHTML=`(市场价￥${product.prev_price})`;
-        //优惠价
-        price.nextElementSibling.nextElementSibling.children[0].children[0].innerHTML=`买2件（含2件）以上,每件￥${product.yh_price}元`;
+        var h3=$('.details>.details_main>.top>.info>h3');
+        // 价格
+        h3.html(product.title)
+        .next('div.price').children('ul').children(':first-child').html(`￥${product.price.toFixed(2)}`)
+        .next().children(':nth-child(2)').html(`为您节省￥${(product.prev_price-product.yh_price).toFixed(2)}`)
+        .next().html(`(市场价￥${product.prev_price})`).parent().next().children().children(':first-child').html(`买2件（含2件）以上,每件￥${product.yh_price}元`);
         //编号
-        var bh=h3.nextElementSibling.nextElementSibling.children[0].children[0];
-        bh.innerHTML=product.bianhao;
-        //品牌
-        var pinP=bh.parentNode.nextElementSibling.children[0];
-        pinP.innerHTML=product.pingpai;
-        //产地
-        pinP.nextElementSibling.nextElementSibling.innerHTML=product.chandi;
-        //口味
-        pinP.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML=product.kouwei;
-        //规格
-        pinP.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML=product.guige;
-        //积分
-        bh.parentNode.nextElementSibling.nextElementSibling.children[0].innerHTML=`${product.jifen}分`;
+        var bh=h3.next().next().children(':first-child').children('span').html(product.bianhao)
+        .parent().next().children('span:first-child').html(product.pingpai)
+        .next().next().html(product.chandi)
+        .next().next().html(product.kouwei)
+        .next().next().html(product.guige)
+        .parent().next().children('span').html(`${product.jifen}分`);
             
 /*********************下左--详情*********************/
-        var bt_table=document.querySelector('.bottom .bt_left .bt_info .bt_info_item1 .item1_top table');
+        var bt_table=$('.bottom>.bt_left>.bt_info>.item>.bt_info_item1>.item1_top>table');
         html='';
         html=`<tbody>
         <tr>
@@ -59,54 +46,53 @@ $(function(){
             <td>保质期：${product.dates}</td>
         </tr>
         </tbody>`;
-        bt_table.innerHTML=html;
-        var itm2=bt_table.parentNode.nextElementSibling.children[0];
+        bt_table.html(html);
+        var itm2=bt_table.parent().next().children('p');
         html=`<img src="${product.img}" alt="${product.title}">`;
-        itm2.innerHTML=html;
+        itm2.html(html);
 
         /********************上左-图片*********************/
 
         //小图
         html='';
-        var sm=document.querySelector('.details .details_main .top .img .img_sm');
+        var sm=$('.details>.details_main>.top>.img>.img_sm');
         for(var s of pics){
             html+=`<li><img src="${s.sm}" data-md='${s.md}' data-lg='${s.md}'></li>
             `;
         }
-        sm.children[0].innerHTML=html;
+        sm.children('ul').html(html);
         //中图
-        var md=document.querySelector('.details .details_main .top .img .img_md img');
-        var lg=document.querySelector('.details .details_main .top .img .img_lg');
+        var md=sm.prev().prev().children('img');
+        var lg=sm.prev();
+        console.log(pics[0].md);
         //设置中图和小图的默认图片路径为第一张图片的路径
-        md.src=pics[0].md;
-        lg.style.backgroundImage=`url("${pics[0].md}")`;
-        sm.onmouseover=function(e){
-            if(e.target.nodeName=='IMG'){
-                var img=e.target;
+        md.attr('src',pics[0].md);
+        lg.css('backgroundImage',`url("${pics[0].md}")`);
+        sm.children('ul').children('li').children('img').on('mouseover',function(){
+                var img=$(this);
                 //根据遍历小图片时自定义属性中中图片和大图片的路径
-                md.src=img.dataset.md;
-                lg.style.backgroundImage=`url(${img.dataset.lg})`;
+                md.attr('src',img.data('md'));
+                lg.css('backgroundImage',`url(${img.data('md')})`);
 
-            }
-        }
-        /**********************放大镜效果************************ */
-        var mask=document.querySelector('.details .details_main .top .img .img_md .move');
-        var mask_l=document.querySelector('.details .details_main .top .img .img_md .move_limit');
-        //鼠标移入移出时mask和大图片的显示和隐藏
-        mask_l.onmouseover=function(){
-           // console.log(mask);
-            mask.className=mask.className.replace('hide','');
-            lg.className=lg.className.replace('hide','');
-        }
-        mask_l.onmouseout=function(){
-            mask.className+=' hide';
-            lg.className+=' hide';
-        }
+        })
+        /**********************放大镜效果************************ */ 
         var msize=230;
-        mask_l.onmousemove=function(e){
+        var mask=$('.details>.details_main>.top>.img>.img_md>.move');
+        var mask_l=$('.details>.details_main>.top>.img>.img_md>.move_limit');
+        //鼠标移入移出时mask和大图片的显示和隐藏
+        mask_l.on('mouseover',function(){
+           // console.log(mask);
+            mask.removeClass('hide');
+            lg.removeClass('hide');
+        })
+        .on('mouseout',function(){
+            mask.addClass(' hide');
+            lg.addClass(' hide');
+        })
+
+        mask_l.on('mousemove',function(e){
             var left=e.offsetX-msize/2;
             var top=e.offsetY-msize/2;
-            //console.log(left,top);
             if(top<0){
                 top=0;
             }
@@ -119,10 +105,10 @@ $(function(){
             if(left>=230){
                 left=230;
             }
-            mask.style.left=`${left}px`;
-            mask.style.top=`${top}px`;
-            lg.style.backgroundPosition=`-${left*2}px -${top*2}px`
-        }
+            mask.css('left',`${left}px`);
+            mask.css('top',`${top}px`);
+            lg.css('backgroundPosition',`-${left*2}px -${top*2}px`)
+        })
         //添加购物车
         $('.details>.details_main>.top>.info>.btn>span>a').on('click',function(){
             var {title,price,guige,jifen}=product;
@@ -194,5 +180,53 @@ $(function(){
                 item.siblings().addClass('hide');
             }
         });
+
+
     })
+    $.ajax({
+        url:'http://localhost:3000/index',
+        type:'get',
+       data:'uid='+uid, //--因为后端测试时没有加？所以不用加data==undefined
+        dataType:'json'  //告诉ajax将json字符串转换为对象
+    })
+    .then(res=>{
+        var {cart}=res;
+        html='';
+        for(var ca of cart){
+            // console.log(ca);
+            // console.log(ca.href);
+            html+=`<ul>
+            <li><a href="${ca.href} target='cart'"><img src="${ca.pic}" alt="${ca.title}"></a></li>
+            <li><a href="${ca.href} target='cart'">${ca.title}</a></li>
+            <li>${ca.count}</li>
+            <li>${ca.price.toFixed(2)}</li>
+        </ul>`;
+        }
+        var cart=$('.right .cart .cart_list');
+        cart.html(html);
+
+        //右侧购物车
+        if(uname){
+            //console.log(res.cart);
+            $('.right>.right-menu>li:first-child>span').html(res.cart.length).parent().on('click',function(){
+                console.log(2)
+                $('.right>.cart>.to_buy>p>span:nth-child(2)').html(res.cart.length);
+                var li=$('.right>.right-menu>li:first-child');
+                console.log(li);
+                if(li.parent().next('.cart').hasClass('hide')){
+                    li.parent().next('.cart').removeClass('hide');
+                }else{
+                    li.parent().next('.cart').addClass('hide');
+
+                }
+            })
+
+        }else{
+            $('.right>.right-menu>li:first-child>span').html('0');
+
+        }
+        
+
+    })
+
 })

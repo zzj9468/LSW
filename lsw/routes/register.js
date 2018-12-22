@@ -7,11 +7,9 @@ router.post("/click",(req,res)=>{
     var phone=req.body.phone;
     var email=req.body.email;
     var upwd=req.body.upwd;
-    console.log(upwd);
     var sql='INSERT INTO lsw_user(uname,phone,email,upwd) VALUES(?,?,?,?)';
     pool.query(sql,[uname,phone,email,upwd],(err,result)=>{
         if(err) throw err;
-        console.log(result);
         if(result.affectedRows>0){
             res.send({code:1,msg:'注册成功'});
         }else{
@@ -29,7 +27,6 @@ router.post("/click",(req,res)=>{
                
                 res.send({code:0,msg:'此手机号已被注册'});
             }else{
-                 console.log(result);
                res.send({code:1});
             }
     })

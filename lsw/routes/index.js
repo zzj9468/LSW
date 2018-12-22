@@ -6,8 +6,6 @@ var pool=require('../pool');
 router.get('/',(req,res)=>{
     var output={};
     var uid=req.query.uid;
-    //console.log(uid)
-    //console.log(uname);
     var sqls={
         miaosha:'SELECT * FROM lsw_index_miaosha',
         hot:'SELECT * FROM lsw_index_hot',

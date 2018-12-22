@@ -6,7 +6,6 @@ router.get('/',(req,res)=>{
     var kwords=decodeURIComponent(
         req.query.kwords
     );
-    //console.log(kwords);
     var output={
         pno:0,   //第几页商品
         pageSize:8,   //每页的数量
@@ -33,7 +32,6 @@ router.get('/',(req,res)=>{
         var sql=`select *,(select prev_price from lsw_details where pid=lid) as p_price  from lsw_index_product where ${arr.join(' and ')}  or fid=(select fid from lsw_index_family where ${arr.join(' and ')} )`; 
 
         var k=kwords.concat(kwords);
-        //console.log(k);
          pool.query(sql,k,(err,result)=>{
              if(err) throw err;
              var count =result.length;
@@ -41,7 +39,6 @@ router.get('/',(req,res)=>{
              output.count=count;
              output.pageCount=pageCount;
              var starti=output.pno*output.pageSize;
-             //console.log(starti);
              output.products=result.slice(starti,starti+output.pageSize);
              res.send(output);
          });

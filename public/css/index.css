@@ -239,11 +239,13 @@ footer{
 }
 
 .banner .banner_main .img{
-    width:4800px;
+    width:1200px;
+    height: 385px;
     float: left;
     position: absolute;
     top:0;
     z-index:-10;
+    overflow: hidden;
 }
 .banner .banner_main .img li{
     float:left;
@@ -276,7 +278,7 @@ footer{
     margin-left: 10px;
     transition: all .2s linear;
 }
-.banner .banner_main .circle li:hover{
+.banner .banner_main .circle li.hover{
     background: #F26024;
     cursor: pointer;
 }
@@ -507,6 +509,12 @@ footer{
     background-image: url("../img/index/day.jpg");
     background-repeat: no-repeat;
 }
+.sec_kill .kill_main .title ul{
+    float: right;
+    font-size: 16px;
+    color: #7f547c;
+}
+
 .sec_kill .kill_main .title ul li{
     float:right;
     color:#666;
