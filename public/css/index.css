@@ -62,6 +62,8 @@ footer{
     width:190px;
     height:385px;
     position: relative;
+    
+
 
 
 
@@ -70,6 +72,10 @@ footer{
     width:190px;
     position:relative;
     z-index:1;
+    background:url("../img/index/menu.png") no-repeat;
+    transition: all .3s ease;
+
+
 }
 .banner .banner_main .menu  .menu_list .menu_item   {
     width:200px;
@@ -113,91 +119,77 @@ footer{
     color:rgb(231, 40, 58);
 }
 .banner .banner_main .menu  .menu_list:first-child {
-    background:url("../img/index/menu.png") 0 0 no-repeat;
-    transition: all .3s ease;
+    background-position: 0 0 ;
 }
 .banner .banner_main .menu  .menu_list:first-child:hover {
-    background:url("../img/index/menu.png") -190px 0 no-repeat;
-    transition: all .3s ease;
+    background-position: -190px 0;
 }
 
 .banner .banner_main .menu  .menu_list:nth-child(2) {
-    background:url("../img/index/menu.png") 0 -35px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -35px;
 }
 .banner .banner_main .menu  .menu_list:nth-child(2):hover {
-    background:url("../img/index/menu.png") -190px -35px no-repeat;
+    background-position: -190px -35px;
 }
 
 .banner .banner_main .menu  .menu_list:nth-child(3) {
-    background:url("../img/index/menu.png") 0 -70px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -70px;
 }
 .banner .banner_main .menu  .menu_list:nth-child(3):hover {
-    background:url("../img/index/menu.png") -190px -70px no-repeat;
+    background-position: -190px -70px;
 }
 
 .banner .banner_main .menu  .menu_list:nth-child(4) {
-    background:url("../img/index/menu.png") 0 -106px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -106px;
 }
 .banner .banner_main .menu  .menu_list:nth-child(4):hover {
-    background:url("../img/index/menu.png") -190px -106px no-repeat;
-    transition: all .3s ease;
+    background-position: -190px -106px ;
 }
 .banner .banner_main .menu  .menu_list:nth-child(5) {
-    background:url("../img/index/menu.png") 0 -139px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -139px ;
 }
 .banner .banner_main .menu  .menu_list:nth-child(5):hover {
-    background:url("../img/index/menu.png") -190px -139px no-repeat;
+    background-position: -190px -139px ;
 }
 .banner .banner_main .menu  .menu_list:nth-child(6) {
-    background:url("../img/index/menu.png") 0 -174px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -174px ;
 }
 .banner .banner_main .menu  .menu_list:nth-child(6):hover {
-    background:url("../img/index/menu.png") -190px -174px no-repeat;
+    background-position: -190px -174px;
 }
 
 .banner .banner_main .menu  .menu_list:nth-child(7) {
-    background:url("../img/index/menu.png") 0 -209px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -209px;
 }
 .banner .banner_main .menu  .menu_list:nth-child(7):hover {
-    background:url("../img/index/menu.png") -190px -209px no-repeat;
+    background-position: -190px -209px;
 }
 
 .banner .banner_main .menu  .menu_list:nth-child(8) {
-    background:url("../img/index/menu.png") 0 -244px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -244px ;
 }
 .banner .banner_main .menu  .menu_list:nth-child(8):hover {
-    background:url("../img/index/menu.png") -190px -244px no-repeat;
+    background-position: -190px -244px;
 }
 
 .banner .banner_main .menu  .menu_list:nth-child(9) {
-    background:url("../img/index/menu.png") 0 -279px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -279px ;
 }
 .banner .banner_main .menu  .menu_list:nth-child(9):hover {
-    background:url("../img/index/menu.png") -190px -279px no-repeat;
-    transition: all .3s ease;
+    background-position: -190px -279px ;
 }
 
 .banner .banner_main .menu  .menu_list:nth-child(10) {
-    background:url("../img/index/menu.png") 0 -315px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -315px;
 }
 .banner .banner_main .menu  .menu_list:nth-child(10):hover {
-    background: url("../img/index/menu.png") -190px -315px no-repeat;
+    background-position: -190px -315px;
 }
 .banner .banner_main .menu  .menu_list:last-child {
-    background:url("../img/index/menu.png") 0 -350px no-repeat;
-    transition: all .3s ease;
+    background-position: 0 -350px;
 }
 .banner .banner_main .menu  .menu_list:last-child:hover {
-    background:url("../img/index/menu.png") -190px -350px no-repeat;
+    background-position: -190px -350px;
 }
 
 .banner .banner_main .menu  .menu_list:hover  a {

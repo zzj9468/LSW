@@ -114,26 +114,33 @@ $(function(){
             var {title,price,guige,jifen}=product;
             var uid=sessionStorage.getItem('uid');
             var uname=sessionStorage.getItem('uname');
-            console.log(uid);
-            console.log(uname);
+            // console.log(uid);
+            // console.log(uname);
             var pic=pics[0].sm;
             var href=`details.html?lid=${lid}`;
             var count=$('.details>.details_main>.top>.info>.num>ul>li>input').val();
-            if($(this).is('a')){
-                $.ajax({
-                    url:'http://127.0.0.1:3000/cart/addCart',
-                    type:'post',
-                    data:{lid,uid,uname,title,href,pic,price,count,jifen,guige},
-                    dataType:'json',
-                }).then(res=>{
-                    //console.log(res);
-                    if($(this).is($(this).parent().children(':first-child'))){
-                        alert(res.msg);
-                    }else{
-                        location.href='cart.html';
-                    }
-                })
-            }
+            if(uname){
+                if($(this).is('a')){
+                    $.ajax({
+                        url:'http://127.0.0.1:3000/cart/addCart',
+                        type:'post',
+                        data:{lid,uid,uname,title,href,pic,price,count,jifen,guige},
+                        dataType:'json',
+                    }).then(res=>{
+                        //console.log(res);
+                        // $('.right>right-menu>li:first-child:span').val()+1;
+                        // $('.right>.right-menu>li:first-child>span').
+                        if($(this).is($(this).parent().children(':first-child'))){
+                            alert(res.msg);
+                        }else{
+                            location.href='cart.html';
+                        }
+                    })
+                }
+        }else{
+            alert('请先登录')
+            location.replace('login.html')
+        }
         })
         //送至
         $('.details>.details_main>.top>.info>.store>.address>.add_top>span').on('click',function(){

@@ -20,7 +20,7 @@ $(function(){
                     } else{
                         sessionStorage.setItem('uname',uname);
                         sessionStorage.setItem('uid',res.uid);
-                        console.log(res);
+                        console.log(res); 
                         alert('登录成功');
                         location.href='index.html';
                     }
