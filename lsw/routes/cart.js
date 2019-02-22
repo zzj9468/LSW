@@ -35,7 +35,7 @@ router.post('/addCart',(req,res)=>{
             pool.query(sql,[lid,uid,uname,title,href,pic,price,count,jifen,guige],(err,result)=>{
                 if(err) throw err;
                 //console.log(result);
-                if(result.affectedRows>0){
+                if(result.affnodeectedRows>0){
                     res.send({code:1,msg:'添加购物车成功'});
                 }else{
                     res.send({code:0,msg:"商品添加失败"});
