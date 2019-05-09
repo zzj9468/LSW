@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "package",
   "version": "1.0.0",
   "main": "app.js",
@@ -22,13 +23,47 @@
   "keywords": [],
   "author": "zzj",
   "license": "ISC",
+=======
+  "name": "lsw",
+  "version": "1.0.0",
+  "description": "零食屋api子系统",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "dev": "node-dev ./app.js"
+  },
+>>>>>>> c34e9489e9d6e98d1ac4e64718d7526a6005b899
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zzj9468/LSW.git"
   },
+<<<<<<< HEAD
+=======
+  "keywords": [
+    "零食屋",
+    "lingshiwu",
+    "零食"
+  ],
+  "author": "zhouzijing",
+  "license": "MIT",
+>>>>>>> c34e9489e9d6e98d1ac4e64718d7526a6005b899
   "bugs": {
     "url": "https://github.com/zzj9468/LSW/issues"
   },
   "homepage": "https://github.com/zzj9468/LSW#readme",
+<<<<<<< HEAD
   "description": ""
+=======
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "multer": "^1.4.1",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.9.7"
+  }
+>>>>>>> c34e9489e9d6e98d1ac4e64718d7526a6005b899
 }

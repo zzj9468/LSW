@@ -134,7 +134,7 @@ INSERT INTO lsw_index_product VALUES
 
 
     (NULL,3,'Hello Kitty果汁软糖混合水','Hello Kitty果汁软糖混合水',13.00,'img/sm/3f_1.1.jpg','details.html?lid=49'),
-    (NULL,3,'Blink冰力克果粉含片糖(青苹果味味)15g','Blink冰力克果粉含片糖(青苹果味味)15g',16.00,'img/sm/3f_1.2.jpg','details.html?lid=50'),
+    (NULL,3,'Blink冰力克果粉含片糖(青苹果味)15g','Blink冰力克果粉含片糖(青苹果味味)15g',16.00,'img/sm/3f_1.2.jpg','details.html?lid=50'),
     (NULL,3,'顽皮兔可吸冰淇淋奶昔果冻芒果味85g','顽皮兔可吸冰淇淋奶昔果冻芒果味85g',1.50,'img/sm/3f_1.3.jpg','details.html?lid=51'),
     (NULL,3,'不二家香醇牛奶硬质奶糖原味 40g','不二家香醇牛奶硬质奶糖原味 40g',9.80,'img/sm/3f_1.4.jpg','details.html?lid=52'),
     (NULL,3,'嘉云牌柠檬糖果200g','嘉云牌柠檬糖果200g',14.00,'img/sm/3f_1.5.jpg','details.html?lid=53'),

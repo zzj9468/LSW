@@ -11,13 +11,11 @@ router.get('/',(req,res)=>{
     var sql='SELECT * FROM lsw_details WHERE lid=?';
     pool.query(sql,[lid],(err,result)=>{
         if(err) throw err;
-        //console.log(result);
         output.product=result[0];
 
         var sql='SELECT * FROM lsw_detail_pic WHERE snacks_id=?';
         pool.query(sql,[lid],(err,result)=>{
         if(err) throw err; 
-        //console.log(result);
         output.pics=result;
         res.send(output);
  
