@@ -1,6 +1,5 @@
 $(function(){
      $('.content_02 button').on('click',function(){
-         console.log(1213)
          var uname=$('.uname').val();
         // console.log(uname);
          var upwd=$('.upwd').val();
@@ -20,7 +19,6 @@ $(function(){
                     } else{
                         sessionStorage.setItem('uname',uname);
                         sessionStorage.setItem('uid',res.uid);
-                        console.log(res); 
                         alert('登录成功');
                         location.href='index.html';
                     }

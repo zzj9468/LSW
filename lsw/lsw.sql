@@ -885,6 +885,27 @@ INSERT INTO lsw_cart VALUES
     (NULL,88,1,'lala','淘豆原味豌豆*100g 约4袋', 'details.html?lid=88','img/details/sm/f5_01_sm1.jpg',3.50,4,12,100),
     (NULL,2,2,'jing','丽能压缩饼干葱油味*500g', 'details.html?lid=2','img/details/sm/f1_02_sm1.jpg',19.80,2,38,500);
 
+/*管理员*/
+CREATE TABLE lsw_admin(
+    aid INT PRIMARY KEY AUTO_INCREMENT, 
+    aname VARCHAR(32),              
+    apwd VARCHAR(64)                
+);
+INSERT INTO lsw_admin VALUES
+(NULL, 'admin', PASSWORD('123456')),
+(NULL, 'boss', PASSWORD('123456'));
 
+/*设置表*/
+CREATE TABLE lsw_settings(
+    sid INT PRIMARY KEY  AUTO_INCREMENT,
+    appname VARCHAR(32),
+    apiUrl VARCHAR(64),
+    adminUrl VARCHAR(64),
+    appUrl VARCHAR(64),
+    icp VARCHAR(64),
+    copyright VARCHAR(128)
+);
+INSERT INTO lsw_settings VALUES
+    (NULL,'零食屋','http://127.0.0.1:3000','http://127.0.0.1:8091','http://127.0.0.1:5500','京ICP备12003709号-3','Copyright © 2002-2019 北京零食屋科技有限公司版权所有');
 
 

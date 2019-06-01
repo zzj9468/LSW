@@ -9,6 +9,9 @@ const index=require('./routes/index.js');
 const details=require('./routes/details');
 const cart=require('./routes/cart');
 const search=require('./routes/search');
+const customer=require('./routes/customer');
+const product=require('./routes/product');
+const admin=require('./routes/admin')
 
 
 var app=express();
@@ -19,11 +22,13 @@ app.use(bodyParser.urlencoded({
     extended:false
 }));
 
+app.use(bodyParser.json())
+
 //将静态文件托管到public文件夹下
 app.use(express.static('public'));
 //跨域的URL
 app.use(cors({
-	origin:"http://127.0.0.1:5500",
+	origin: ["http://127.0.0.1:5500", 'http://127.0.0.1:8091'],
 	credentials:true
 }))
 app.use(session({
@@ -41,3 +46,6 @@ app.use('/index',index);
 app.use('/details',details);
 app.use('/cart',cart);
 app.use('/search',search);
+app.use('/customer',customer);
+app.use('/product',product);
+app.use('/admin',admin)
